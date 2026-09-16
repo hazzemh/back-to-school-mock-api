@@ -399,6 +399,69 @@
       ]
     },
     {
+      "name": "B2S4 FTTH Maturity Index",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-Request-ID",
+            "value": "{{$guid}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/ExternalService/get_back_to_school_ftth_maturity_index_dashboard_payload",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "ExternalService",
+            "get_back_to_school_ftth_maturity_index_dashboard_payload"
+          ]
+        },
+        "description": "Mirrors the supplied FTTH maturity index dashboard contract. Payload is a flat report object instead of the common DashboardEnvelope."
+      },
+      "response": [
+        {
+          "name": "200 OK",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Request-ID",
+                "value": "{{$guid}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/ExternalService/get_back_to_school_ftth_maturity_index_dashboard_payload",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "ExternalService",
+                "get_back_to_school_ftth_maturity_index_dashboard_payload"
+              ]
+            },
+            "description": "Mirrors the supplied FTTH maturity index dashboard contract. Payload is a flat report object instead of the common DashboardEnvelope."
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"FDT Alarm Index Avg\": {\n    \"Total average\": \"(Data[0].avg_pi + Data[1].avg_pi + Data[2].avg_pi + Data[3].avg_pi) / 4\",\n    \"Data\": [\n      {\"region\": \"EASTERN\", \"avg_pi\": 99.1},\n      {\"region\": \"SOUTHERN\", \"avg_pi\": 98.9},\n      {\"region\": \"WESTERN\", \"avg_pi\": 99.0},\n      {\"region\": \"CENTRAL\", \"avg_pi\": 98.3}\n    ]\n  },\n  \"Service Index Average\": {\"average\": 99.5},\n  \"Alarm Index Average\": {\"average\": 99.5},\n  \"FDT Overall Service Index\": [\n    {\"Optimal\": 99.81},\n    {\"Good\": 0.18},\n    {\"Bad\": 0.01}\n  ],\n  \"Daily FDT Indexes\": {\n    \"Data\": [\n      {\"historical_service_index\": 96.7, \"historical_alarm_index\": 95.2, \"live_service_index\": 96.9, \"live_alarm_index\": 90.8, \"row_version\": \"2025-12-07T00:00:00\"}\n    ]\n  },\n  \"map\": {\n    \"Data\": [\n      {\"district\": \"Riyadh East\", \"total\": 32, \"optimal\": 28, \"good\": 3, \"bad\": 1, \"tp_pi\": 99.1, \"fdt_pi\": 98.6}\n    ]\n  },\n  \"Table\": {\n    \"Data\": [\n      {\"region\": \"EASTERN\", \"district\": \"Riyadh East\", \"fdt\": \"TAWNRDJ0019\", \"service_index\": 93.2, \"fault_rate\": 0.9, \"power_index\": 87.4}\n    ]\n  }\n}"
+        }
+      ]
+    },
+    {
       "name": "AI Integration",
       "item": [
         {
