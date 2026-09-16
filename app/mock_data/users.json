@@ -1,0 +1,12 @@
+[
+  {
+    "id": "USR-001",
+    "username": "hazem.hossam",
+    "first_name": "Hazem",
+    "last_name": "Hossam",
+    "display_name": "Hazem Hossam",
+    "email": "hazem.hossam@example.com",
+    "role": "Network Operations",
+    "preferred_language": "en"
+  }
+]

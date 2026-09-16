@@ -1,0 +1,10 @@
+services:
+  b2s-mock-api:
+    # Replace OWNER/REPO with the lowercase GitHub org/user and repo name (ghcr.io requires lowercase).
+    image: ghcr.io/OWNER/REPO:latest
+    container_name: b2s-mock-api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

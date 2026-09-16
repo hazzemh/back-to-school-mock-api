@@ -1,0 +1,1344 @@
+{
+  "StatusCode": 200,
+  "Messages": null,
+  "Data": {
+    "returned_data": {
+      "meta": {
+        "commands": [
+          {
+            "order": 1,
+            "title": "Service Assurance Command",
+            "subtitle": "Network health, readiness & digital service exposure",
+            "command_id": "service_assurance"
+          },
+          {
+            "order": 2,
+            "title": "Complaint Intelligence Command",
+            "subtitle": "Customer impact, experience health & operational response",
+            "command_id": "complaint_intelligence"
+          },
+          {
+            "order": 3,
+            "title": "Service Operations & Ticket Execution Command",
+            "subtitle": "Live workload, ownership & resolution control",
+            "command_id": "service_operations"
+          }
+        ],
+        "timezone": "Asia/Riyadh",
+        "data_as_of": "2026-09-13T17:51:56.554737+03:00",
+        "special_day": {
+          "events": [],
+          "is_special_day": false
+        },
+        "generated_at": "2026-09-13T17:51:56.554737+03:00",
+        "configuration": {
+          "baseline_mode": "moving_same_weekday",
+          "baseline_weeks": 6,
+          "deviation_thresholds": {
+            "warning_pct": 15,
+            "critical_pct": 25
+          },
+          "load_driver_min_surge_tickets": 20
+        },
+        "applied_filters": {},
+        "payload_version": "0.1.0-draft"
+      },
+      "sections": [
+        {
+          "kpis": [
+            {
+              "unit": "tickets",
+              "count": 24,
+              "label": "OLT Complaints vs Baseline",
+              "kpi_id": "top_olt_vs_baseline",
+              "status": "optimal",
+              "baseline": 6,
+              "dimension": "olt",
+              "entity_id": "172-00_RMALRDAZOL4",
+              "entity_label": "172-00_RMALRDAZOL4",
+              "deviation_pct": 300.0
+            },
+            {
+              "unit": "tickets",
+              "count": 28,
+              "label": "FDT Complaints vs Baseline",
+              "kpi_id": "top_fdt_vs_baseline",
+              "status": "critical",
+              "baseline": 1,
+              "dimension": "fdt",
+              "entity_id": "TAWNRDJ0022",
+              "entity_label": "TAWNRDJ0022",
+              "deviation_pct": 2700.0
+            },
+            {
+              "unit": "tickets",
+              "count": 63,
+              "label": "HAY Complaints vs Baseline",
+              "kpi_id": "top_hay_vs_baseline",
+              "status": "optimal",
+              "baseline": 51,
+              "dimension": "hay",
+              "entity_id": "Tuwaiq",
+              "entity_label": "Tuwaiq",
+              "deviation_pct": 23.5
+            },
+            {
+              "unit": "tickets",
+              "count": 232,
+              "label": "ONT Type Complaints vs Baseline",
+              "kpi_id": "top_ont_type_vs_baseline",
+              "status": "optimal",
+              "baseline": 223,
+              "dimension": "ont_type",
+              "entity_id": "HG8245W5",
+              "entity_label": "HG8245W5",
+              "deviation_pct": 4.0
+            }
+          ],
+          "color": "red",
+          "order": 1,
+          "state": "ok",
+          "title": "Operational Deviation Watch",
+          "status": "critical",
+          "subtitle": "Worst-performing entity per hierarchy dimension, vs baseline",
+          "command_id": "service_operations",
+          "section_id": "top_metrics",
+          "command_order": 3
+        },
+        {
+          "color": "green",
+          "order": 2,
+          "state": "ok",
+          "title": "Operational Workload Distribution",
+          "charts": [
+            {
+              "type": "donut",
+              "total": 1290,
+              "chart_id": "technology_mix",
+              "segments": [
+                {
+                  "key": "ftth",
+                  "pct": 71.2,
+                  "count": 918,
+                  "label": "FTTH"
+                },
+                {
+                  "key": "olo",
+                  "pct": 16.3,
+                  "count": 210,
+                  "label": "OLO"
+                },
+                {
+                  "key": "copper",
+                  "pct": 12.6,
+                  "count": 162,
+                  "label": "Copper"
+                }
+              ]
+            },
+            {
+              "type": "donut",
+              "total": 1290,
+              "chart_id": "open_vs_reopen",
+              "segments": [
+                {
+                  "key": "open",
+                  "pct": 94.1,
+                  "count": 1214,
+                  "label": "Open"
+                },
+                {
+                  "key": "reopen",
+                  "pct": 5.9,
+                  "count": 76,
+                  "label": "Reopen"
+                }
+              ]
+            }
+          ],
+          "status": "optimal",
+          "subtitle": "Technology mix and reopen exposure",
+          "command_id": "service_operations",
+          "section_id": "workload_distribution",
+          "command_order": 3
+        },
+        {
+          "color": "green",
+          "order": 3,
+          "state": "ok",
+          "title": "Daily Load Trend",
+          "trend": [
+            {
+              "date": "2026-08-20",
+              "closed": 1869,
+              "created": 1887,
+              "still_open": 1
+            },
+            {
+              "date": "2026-08-21",
+              "closed": 1436,
+              "created": 1323,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-22",
+              "closed": 1596,
+              "created": 1627,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-23",
+              "closed": 1769,
+              "created": 2063,
+              "still_open": 1
+            },
+            {
+              "date": "2026-08-24",
+              "closed": 2115,
+              "created": 1971,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-25",
+              "closed": 1914,
+              "created": 1677,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-26",
+              "closed": 1840,
+              "created": 1968,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-27",
+              "closed": 1872,
+              "created": 1730,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-28",
+              "closed": 1305,
+              "created": 1449,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-29",
+              "closed": 1874,
+              "created": 2031,
+              "still_open": 0
+            },
+            {
+              "date": "2026-08-30",
+              "closed": 2161,
+              "created": 2036,
+              "still_open": 2
+            },
+            {
+              "date": "2026-08-31",
+              "closed": 1847,
+              "created": 1718,
+              "still_open": 0
+            },
+            {
+              "date": "2026-09-01",
+              "closed": 1755,
+              "created": 1713,
+              "still_open": 0
+            },
+            {
+              "date": "2026-09-02",
+              "closed": 1653,
+              "created": 1619,
+              "still_open": 1
+            },
+            {
+              "date": "2026-09-03",
+              "closed": 1653,
+              "created": 1554,
+              "still_open": 0
+            },
+            {
+              "date": "2026-09-04",
+              "closed": 1140,
+              "created": 1286,
+              "still_open": 0
+            },
+            {
+              "date": "2026-09-05",
+              "closed": 1574,
+              "created": 1667,
+              "still_open": 0
+            },
+            {
+              "date": "2026-09-06",
+              "closed": 1729,
+              "created": 1768,
+              "still_open": 0
+            },
+            {
+              "date": "2026-09-07",
+              "closed": 1808,
+              "created": 1654,
+              "still_open": 5
+            },
+            {
+              "date": "2026-09-08",
+              "closed": 1595,
+              "created": 1546,
+              "still_open": 6
+            },
+            {
+              "date": "2026-09-09",
+              "closed": 1547,
+              "created": 1484,
+              "still_open": 10
+            },
+            {
+              "date": "2026-09-10",
+              "closed": 1583,
+              "created": 1540,
+              "still_open": 49
+            },
+            {
+              "date": "2026-09-11",
+              "closed": 1217,
+              "created": 1242,
+              "still_open": 58
+            },
+            {
+              "date": "2026-09-12",
+              "closed": 1646,
+              "created": 1889,
+              "still_open": 436
+            }
+          ],
+          "status": "optimal",
+          "subtitle": "Created, closed, and still-open-if-created-that-day, per day",
+          "command_id": "service_operations",
+          "section_id": "daily_load_trend",
+          "command_order": 3
+        },
+        {
+          "color": "red",
+          "order": 4,
+          "state": "ok",
+          "title": "Complaint Deviation Drivers",
+          "status": "critical",
+          "subtitle": "Complaint count, baseline and deviation by operational hierarchy",
+          "command_id": "service_operations",
+          "section_id": "deviation_drivers",
+          "command_order": 3,
+          "driver_groups": [
+            {
+              "color": "green",
+              "items": [
+                {
+                  "count": 21,
+                  "status": "optimal",
+                  "baseline": 3,
+                  "load_pct": 2.3,
+                  "entity_id": "116-00_MRSTRD00OL2",
+                  "entity_label": "116-00_MRSTRD00OL2",
+                  "deviation_pct": 600.0
+                },
+                {
+                  "count": 24,
+                  "status": "optimal",
+                  "baseline": 6,
+                  "load_pct": 2.6,
+                  "entity_id": "172-00_RMALRDAZOL4",
+                  "entity_label": "172-00_RMALRDAZOL4",
+                  "deviation_pct": 300.0
+                },
+                {
+                  "count": 16,
+                  "status": "optimal",
+                  "baseline": 6,
+                  "load_pct": 1.7,
+                  "entity_id": "172-00_HMRARD00OTG",
+                  "entity_label": "172-00_HMRARD00OTG",
+                  "deviation_pct": 166.7
+                },
+                {
+                  "count": 19,
+                  "status": "optimal",
+                  "baseline": 9,
+                  "load_pct": 2.1,
+                  "entity_id": "172-00_HMRARD00OTF",
+                  "entity_label": "172-00_HMRARD00OTF",
+                  "deviation_pct": 111.1
+                },
+                {
+                  "count": 15,
+                  "status": "optimal",
+                  "baseline": 0,
+                  "load_pct": 1.6,
+                  "entity_id": "601-00_JRDHQI00OL7",
+                  "entity_label": "601-00_JRDHQI00OL7",
+                  "deviation_pct": null
+                }
+              ],
+              "label": "Top 5 OLTs",
+              "status": "optimal",
+              "dimension": "olt"
+            },
+            {
+              "color": "red",
+              "items": [
+                {
+                  "count": 28,
+                  "status": "critical",
+                  "baseline": 1,
+                  "load_pct": 3.0,
+                  "entity_id": "TAWNRDJ0022",
+                  "entity_label": "TAWNRDJ0022",
+                  "deviation_pct": 2700.0
+                },
+                {
+                  "count": 11,
+                  "status": "optimal",
+                  "baseline": 2,
+                  "load_pct": 1.2,
+                  "entity_id": "MUNSRDJ1203",
+                  "entity_label": "MUNSRDJ1203",
+                  "deviation_pct": 450.0
+                },
+                {
+                  "count": 7,
+                  "status": "optimal",
+                  "baseline": 3,
+                  "load_pct": 0.8,
+                  "entity_id": "ZHRHRDJ1133",
+                  "entity_label": "ZHRHRDJ1133",
+                  "deviation_pct": 133.3
+                },
+                {
+                  "count": 18,
+                  "status": "optimal",
+                  "baseline": 0,
+                  "load_pct": 1.9,
+                  "entity_id": "RMALRDJ15DH",
+                  "entity_label": "RMALRDJ15DH",
+                  "deviation_pct": null
+                },
+                {
+                  "count": 7,
+                  "status": "optimal",
+                  "baseline": 0,
+                  "load_pct": 0.8,
+                  "entity_id": "TWIQRDJ115X",
+                  "entity_label": "TWIQRDJ115X",
+                  "deviation_pct": null
+                }
+              ],
+              "label": "Top 5 FDTs",
+              "status": "critical",
+              "dimension": "fdt"
+            },
+            {
+              "color": "red",
+              "items": [
+                {
+                  "count": 32,
+                  "status": "critical",
+                  "baseline": 6,
+                  "load_pct": 3.2,
+                  "entity_id": "Tawoon",
+                  "entity_label": "Tawoon",
+                  "deviation_pct": 433.3
+                },
+                {
+                  "count": 26,
+                  "status": "optimal",
+                  "baseline": 11,
+                  "load_pct": 2.6,
+                  "entity_id": "Ar Rimal",
+                  "entity_label": "Ar Rimal",
+                  "deviation_pct": 136.4
+                },
+                {
+                  "count": 32,
+                  "status": "optimal",
+                  "baseline": 16,
+                  "load_pct": 3.2,
+                  "entity_id": "Dherat Al Laben",
+                  "entity_label": "Dherat Al Laben",
+                  "deviation_pct": 100.0
+                },
+                {
+                  "count": 63,
+                  "status": "optimal",
+                  "baseline": 51,
+                  "load_pct": 6.3,
+                  "entity_id": "Tuwaiq",
+                  "entity_label": "Tuwaiq",
+                  "deviation_pct": 23.5
+                },
+                {
+                  "count": 36,
+                  "status": "optimal",
+                  "baseline": 31,
+                  "load_pct": 3.6,
+                  "entity_id": "Al Munsiyah",
+                  "entity_label": "Al Munsiyah",
+                  "deviation_pct": 16.1
+                }
+              ],
+              "label": "Top 5 HAY",
+              "status": "critical",
+              "dimension": "hay"
+            },
+            {
+              "color": "green",
+              "items": [
+                {
+                  "count": 110,
+                  "status": "optimal",
+                  "baseline": 99,
+                  "load_pct": 12.0,
+                  "entity_id": "HG8145X6-10",
+                  "entity_label": "HG8145X6-10",
+                  "deviation_pct": 11.1
+                },
+                {
+                  "count": 232,
+                  "status": "optimal",
+                  "baseline": 223,
+                  "load_pct": 25.2,
+                  "entity_id": "HG8245W5",
+                  "entity_label": "HG8245W5",
+                  "deviation_pct": 4.0
+                },
+                {
+                  "count": 96,
+                  "status": "optimal",
+                  "baseline": 93,
+                  "load_pct": 10.4,
+                  "entity_id": "HX-2466GN-0ST",
+                  "entity_label": "HX-2466GN-0ST",
+                  "deviation_pct": 3.2
+                },
+                {
+                  "count": 183,
+                  "status": "optimal",
+                  "baseline": 188,
+                  "load_pct": 19.9,
+                  "entity_id": "ZNID-2428B1",
+                  "entity_label": "ZNID-2428B1",
+                  "deviation_pct": -2.7
+                },
+                {
+                  "count": 89,
+                  "status": "optimal",
+                  "baseline": 109,
+                  "load_pct": 9.7,
+                  "entity_id": "G-2426G-A",
+                  "entity_label": "G-2426G-A",
+                  "deviation_pct": -18.3
+                }
+              ],
+              "label": "Top 5 ONT Types",
+              "status": "optimal",
+              "dimension": "ont_type"
+            }
+          ]
+        },
+        {
+          "color": "green",
+          "order": 5,
+          "state": "ok",
+          "title": "District Ticket Workload",
+          "status": "optimal",
+          "regions": [
+            {
+              "region": "Riyadh",
+              "region_id": "SA-01",
+              "region_ord": 1,
+              "ticket_count": 639,
+              "district_display_name": "Riyadh"
+            },
+            {
+              "region": "Riyadh",
+              "region_id": "SA-01",
+              "region_ord": 1,
+              "ticket_count": 19,
+              "district_display_name": "Riyadh District"
+            },
+            {
+              "region": "Makkah",
+              "region_id": "SA-02",
+              "region_ord": 2,
+              "ticket_count": 193,
+              "district_display_name": "Jeddah"
+            },
+            {
+              "region": "Makkah",
+              "region_id": "SA-02",
+              "region_ord": 2,
+              "ticket_count": 43,
+              "district_display_name": "Makkah"
+            },
+            {
+              "region": "Makkah",
+              "region_id": "SA-02",
+              "region_ord": 2,
+              "ticket_count": 28,
+              "district_display_name": "Taif"
+            },
+            {
+              "region": "Madinah",
+              "region_id": "SA-03",
+              "region_ord": 3,
+              "ticket_count": 35,
+              "district_display_name": "Madinah"
+            },
+            {
+              "region": "Madinah",
+              "region_id": "SA-03",
+              "region_ord": 3,
+              "ticket_count": 69,
+              "district_display_name": "Yanbu"
+            },
+            {
+              "region": "Eastern Region",
+              "region_id": "SA-04",
+              "region_ord": 4,
+              "ticket_count": 14,
+              "district_display_name": "Al Ahsa"
+            },
+            {
+              "region": "Eastern Region",
+              "region_id": "SA-04",
+              "region_ord": 4,
+              "ticket_count": 92,
+              "district_display_name": "Dammam"
+            },
+            {
+              "region": "Eastern Region",
+              "region_id": "SA-04",
+              "region_ord": 4,
+              "ticket_count": 14,
+              "district_display_name": "Jubail"
+            },
+            {
+              "region": "Qassim",
+              "region_id": "SA-05",
+              "region_ord": 5,
+              "ticket_count": 36,
+              "district_display_name": "Qassim"
+            },
+            {
+              "region": "Hail",
+              "region_id": "SA-06",
+              "region_ord": 6,
+              "ticket_count": 2,
+              "district_display_name": "Hail"
+            },
+            {
+              "region": "Tabuk",
+              "region_id": "SA-07",
+              "region_ord": 7,
+              "ticket_count": 13,
+              "district_display_name": "Tabuk"
+            },
+            {
+              "region": "Northern Region",
+              "region_id": "SA-08",
+              "region_ord": 8,
+              "ticket_count": 5,
+              "district_display_name": "Northern Border"
+            },
+            {
+              "region": "Jazan",
+              "region_id": "SA-09",
+              "region_ord": 9,
+              "ticket_count": 46,
+              "district_display_name": "Jizan"
+            },
+            {
+              "region": "Najran",
+              "region_id": "SA-10",
+              "region_ord": 10,
+              "ticket_count": 3,
+              "district_display_name": "Najran"
+            },
+            {
+              "region": "Baha",
+              "region_id": "SA-11",
+              "region_ord": 11,
+              "ticket_count": 6,
+              "district_display_name": "Al Baha"
+            },
+            {
+              "region": "Jouf",
+              "region_id": "SA-12",
+              "region_ord": 12,
+              "ticket_count": 3,
+              "district_display_name": "Al Jouf"
+            },
+            {
+              "region": "Asir",
+              "region_id": "SA-14",
+              "region_ord": 13,
+              "ticket_count": 30,
+              "district_display_name": "Asir"
+            }
+          ],
+          "subtitle": "Currently-open tickets by district",
+          "command_id": "service_operations",
+          "section_id": "district_ticket_workload",
+          "command_order": 3
+        },
+        {
+          "color": "orange",
+          "order": 6,
+          "state": "ok",
+          "title": "Execution Ownership & Ageing",
+          "status": "warning",
+          "summary": {
+            "days_1_3": 287,
+            "over_1_day": 949,
+            "over_3_days": 54
+          },
+          "by_stage": [
+            {
+              "team_id": "CSDD",
+              "days_1_3": 155,
+              "stage_id": "CSDD",
+              "over_1_day": 524,
+              "over_3_days": 22
+            },
+            {
+              "team_id": "SOC-FTR",
+              "days_1_3": 22,
+              "stage_id": "SOC-FTR",
+              "over_1_day": 132,
+              "over_3_days": 14
+            },
+            {
+              "team_id": "IVR",
+              "days_1_3": 12,
+              "stage_id": "IVR",
+              "over_1_day": 22,
+              "over_3_days": 0
+            },
+            {
+              "team_id": "FOC",
+              "days_1_3": 49,
+              "stage_id": "FOC",
+              "over_1_day": 105,
+              "over_3_days": 10
+            },
+            {
+              "team_id": "SOC-Quality",
+              "days_1_3": 33,
+              "stage_id": "SOC-Quality",
+              "over_1_day": 30,
+              "over_3_days": 7
+            },
+            {
+              "team_id": "SOC-T2",
+              "days_1_3": 16,
+              "stage_id": "SOC-T2",
+              "over_1_day": 136,
+              "over_3_days": 1
+            }
+          ],
+          "subtitle": "Age exposure by operational stage",
+          "command_id": "service_operations",
+          "section_id": "execution_ownership_ageing",
+          "command_order": 3
+        },
+        {
+          "color": "green",
+          "order": 7,
+          "state": "ok",
+          "title": "CST Escalation Watch",
+          "status": "optimal",
+          "subtitle": "Operator-specific 10-day escalation and reason intelligence",
+          "stc_total": 11,
+          "total_cst": 22,
+          "command_id": "service_operations",
+          "section_id": "cst_escalation_watch",
+          "window_days": 10,
+          "command_order": 3,
+          "olo_total_trend": {
+            "label": "All OLO Operators",
+            "trend": [
+              {
+                "date": "2026-09-04",
+                "total": 8,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-05",
+                "total": 7,
+                "logical": 1,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-06",
+                "total": 16,
+                "logical": 2,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-07",
+                "total": 7,
+                "logical": 1,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-08",
+                "total": 8,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 1
+              },
+              {
+                "date": "2026-09-09",
+                "total": 13,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-10",
+                "total": 13,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-11",
+                "total": 8,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-12",
+                "total": 11,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 0
+              },
+              {
+                "date": "2026-09-13",
+                "total": 4,
+                "logical": 0,
+                "mdt/mso": 0,
+                "physical": 0
+              }
+            ],
+            "operator_id": "ALL",
+            "current_total": 11
+          },
+          "operator_trends": [
+            {
+              "label": "STC Escalations",
+              "trend": [
+                {
+                  "date": "2026-09-04",
+                  "total": 7,
+                  "logical": 2,
+                  "mdt/mso": 2,
+                  "physical": 3
+                },
+                {
+                  "date": "2026-09-05",
+                  "total": 2,
+                  "logical": 1,
+                  "mdt/mso": 0,
+                  "physical": 1
+                },
+                {
+                  "date": "2026-09-06",
+                  "total": 10,
+                  "logical": 4,
+                  "mdt/mso": 0,
+                  "physical": 6
+                },
+                {
+                  "date": "2026-09-07",
+                  "total": 15,
+                  "logical": 7,
+                  "mdt/mso": 0,
+                  "physical": 8
+                },
+                {
+                  "date": "2026-09-08",
+                  "total": 14,
+                  "logical": 5,
+                  "mdt/mso": 2,
+                  "physical": 6
+                },
+                {
+                  "date": "2026-09-09",
+                  "total": 17,
+                  "logical": 9,
+                  "mdt/mso": 1,
+                  "physical": 7
+                },
+                {
+                  "date": "2026-09-10",
+                  "total": 10,
+                  "logical": 6,
+                  "mdt/mso": 1,
+                  "physical": 3
+                },
+                {
+                  "date": "2026-09-11",
+                  "total": 5,
+                  "logical": 1,
+                  "mdt/mso": 1,
+                  "physical": 3
+                },
+                {
+                  "date": "2026-09-12",
+                  "total": 11,
+                  "logical": 8,
+                  "mdt/mso": 2,
+                  "physical": 1
+                },
+                {
+                  "date": "2026-09-13",
+                  "total": 3,
+                  "logical": 1,
+                  "mdt/mso": 1,
+                  "physical": 1
+                }
+              ],
+              "operator_id": "STC",
+              "current_total": 11
+            },
+            {
+              "label": "Dawiyat Escalations",
+              "trend": [
+                {
+                  "date": "2026-09-04",
+                  "total": 3,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-05",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-06",
+                  "total": 4,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-07",
+                  "total": 1,
+                  "logical": 1,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-08",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-09",
+                  "total": 5,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-10",
+                  "total": 5,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-11",
+                  "total": 4,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-12",
+                  "total": 5,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-13",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                }
+              ],
+              "operator_id": "Dawiyat",
+              "current_total": 5
+            },
+            {
+              "label": "ITC Escalations",
+              "trend": [
+                {
+                  "date": "2026-09-04",
+                  "total": 3,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-05",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-06",
+                  "total": 5,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-07",
+                  "total": 4,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-08",
+                  "total": 5,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-09",
+                  "total": 5,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-10",
+                  "total": 7,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-11",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-12",
+                  "total": 4,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-13",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                }
+              ],
+              "operator_id": "ITC",
+              "current_total": 4
+            },
+            {
+              "label": "Mobily Escalations",
+              "trend": [
+                {
+                  "date": "2026-09-04",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-05",
+                  "total": 3,
+                  "logical": 1,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-06",
+                  "total": 7,
+                  "logical": 2,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-07",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-08",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-09",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-10",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-11",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-12",
+                  "total": 2,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-13",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                }
+              ],
+              "operator_id": "Mobily",
+              "current_total": 2
+            },
+            {
+              "label": "ACES Escalations",
+              "trend": [
+                {
+                  "date": "2026-09-04",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-05",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-06",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-07",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-08",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-09",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-10",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-11",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-12",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-13",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                }
+              ],
+              "operator_id": "ACES",
+              "current_total": 0
+            },
+            {
+              "label": "Unknown Escalations",
+              "trend": [
+                {
+                  "date": "2026-09-04",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-05",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-06",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-07",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-08",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 1
+                },
+                {
+                  "date": "2026-09-09",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-10",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-11",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-12",
+                  "total": 0,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                },
+                {
+                  "date": "2026-09-13",
+                  "total": 1,
+                  "logical": 0,
+                  "mdt/mso": 0,
+                  "physical": 0
+                }
+              ],
+              "operator_id": "Unknown",
+              "current_total": 0
+            }
+          ],
+          "operators_summary": [
+            {
+              "count": 11,
+              "label": "STC",
+              "operator_id": "STC"
+            },
+            {
+              "count": 5,
+              "label": "Dawiyat",
+              "operator_id": "Dawiyat"
+            },
+            {
+              "count": 4,
+              "label": "ITC",
+              "operator_id": "ITC"
+            },
+            {
+              "count": 2,
+              "label": "Mobily",
+              "operator_id": "Mobily"
+            },
+            {
+              "count": 0,
+              "label": "ACES",
+              "operator_id": "ACES"
+            },
+            {
+              "count": 0,
+              "label": "Unknown",
+              "operator_id": "Unknown"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "DataCount": 0
+}

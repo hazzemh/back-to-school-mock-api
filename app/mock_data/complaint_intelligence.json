@@ -1,0 +1,3754 @@
+{
+  "StatusCode": 200,
+  "Messages": null,
+  "Data": {
+    "returned_data": {
+      "meta": {
+        "commands": [
+          {
+            "order": 1,
+            "title": "Service Assurance Command",
+            "subtitle": "Network health, readiness & digital service exposure",
+            "command_id": "service_assurance"
+          },
+          {
+            "order": 2,
+            "title": "Complaint Intelligence Command",
+            "subtitle": "Customer impact, experience health & operational response",
+            "command_id": "complaint_intelligence"
+          }
+        ],
+        "timezone": "Asia/Riyadh",
+        "data_as_of": "2026-09-13T17:51:53.555885+03:00",
+        "special_day": {
+          "events": [],
+          "is_special_day": false
+        },
+        "generated_at": "2026-09-13T17:51:53.555885+03:00",
+        "configuration": {
+          "baseline_mode": "moving_same_weekday",
+          "baseline_weeks": 6,
+          "operational_teams": [
+            {
+              "label": "SOC-T2",
+              "team_id": "SOC-T2"
+            },
+            {
+              "label": "CSDD",
+              "team_id": "CSDD"
+            },
+            {
+              "label": "FOC",
+              "team_id": "FOC"
+            }
+          ],
+          "aged_threshold_hours": 24,
+          "deviation_thresholds": {
+            "warning_pct": 15,
+            "critical_pct": 25
+          }
+        },
+        "applied_filters": {},
+        "payload_version": "0.6.0-draft"
+      },
+      "sections": [
+        {
+          "cards": [
+            {
+              "unit": "status",
+              "color": "green",
+              "label": "Status",
+              "value": "NORMAL",
+              "kpi_id": "complaint_status",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "baseline": null,
+              "comparison": null
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Total Open (Live)",
+              "value": 1305,
+              "kpi_id": "journey_total_open_live",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:51:53.555885+03:00",
+                "start": null,
+                "end_rule": "live"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 1205,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 100,
+                "direction": "lower_is_better",
+                "percentage": 8
+              }
+            },
+            {
+              "unit": "complaints",
+              "color": "green",
+              "label": "Total Created Today",
+              "value": 998,
+              "kpi_id": "total_created_today",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 994,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 4,
+                "direction": "lower_is_better",
+                "percentage": 0
+              }
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "label": "Deviation %",
+              "value": 0,
+              "kpi_id": "deviation_percent_till_hour",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "baseline": null,
+              "comparison": null
+            },
+            {
+              "unit": "tickets",
+              "color": "red",
+              "label": "On Hold Tickets",
+              "value": 156,
+              "kpi_id": "journey_on_hold_tickets",
+              "status": "critical",
+              "window": {
+                "end": "2026-09-13T17:51:53.555885+03:00",
+                "start": null,
+                "end_rule": "live"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 57,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 99,
+                "direction": "lower_is_better",
+                "percentage": 174
+              }
+            }
+          ],
+          "color": "green",
+          "order": 1,
+          "state": "ok",
+          "title": "Live Hourly Complaints",
+          "status": "optimal",
+          "heatmap": {
+            "categories": [
+              {
+                "label": "FTTH Physical",
+                "values": [
+                  {
+                    "hour": "00",
+                    "color": "green",
+                    "value": 16,
+                    "status": "optimal",
+                    "baseline": 33
+                  },
+                  {
+                    "hour": "01",
+                    "color": "green",
+                    "value": 24,
+                    "status": "optimal",
+                    "baseline": 54
+                  },
+                  {
+                    "hour": "02",
+                    "color": "green",
+                    "value": 28,
+                    "status": "optimal",
+                    "baseline": 67
+                  },
+                  {
+                    "hour": "03",
+                    "color": "green",
+                    "value": 33,
+                    "status": "optimal",
+                    "baseline": 77
+                  },
+                  {
+                    "hour": "04",
+                    "color": "green",
+                    "value": 37,
+                    "status": "optimal",
+                    "baseline": 84
+                  },
+                  {
+                    "hour": "05",
+                    "color": "green",
+                    "value": 43,
+                    "status": "optimal",
+                    "baseline": 94
+                  },
+                  {
+                    "hour": "06",
+                    "color": "green",
+                    "value": 55,
+                    "status": "optimal",
+                    "baseline": 105
+                  },
+                  {
+                    "hour": "07",
+                    "color": "green",
+                    "value": 70,
+                    "status": "optimal",
+                    "baseline": 127
+                  },
+                  {
+                    "hour": "08",
+                    "color": "green",
+                    "value": 84,
+                    "status": "optimal",
+                    "baseline": 146
+                  },
+                  {
+                    "hour": "09",
+                    "color": "green",
+                    "value": 107,
+                    "status": "optimal",
+                    "baseline": 173
+                  },
+                  {
+                    "hour": "10",
+                    "color": "green",
+                    "value": 142,
+                    "status": "optimal",
+                    "baseline": 205
+                  },
+                  {
+                    "hour": "11",
+                    "color": "green",
+                    "value": 174,
+                    "status": "optimal",
+                    "baseline": 244
+                  },
+                  {
+                    "hour": "12",
+                    "color": "green",
+                    "value": 198,
+                    "status": "optimal",
+                    "baseline": 279
+                  },
+                  {
+                    "hour": "13",
+                    "color": "green",
+                    "value": 243,
+                    "status": "optimal",
+                    "baseline": 323
+                  },
+                  {
+                    "hour": "14",
+                    "color": "green",
+                    "value": 299,
+                    "status": "optimal",
+                    "baseline": 369
+                  },
+                  {
+                    "hour": "15",
+                    "color": "green",
+                    "value": 345,
+                    "status": "optimal",
+                    "baseline": 412
+                  },
+                  {
+                    "hour": "16",
+                    "color": "green",
+                    "value": 399,
+                    "status": "optimal",
+                    "baseline": 468
+                  },
+                  {
+                    "hour": "17",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 532
+                  },
+                  {
+                    "hour": "18",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 595
+                  },
+                  {
+                    "hour": "19",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 663
+                  },
+                  {
+                    "hour": "20",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 719
+                  },
+                  {
+                    "hour": "21",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 773
+                  },
+                  {
+                    "hour": "22",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 811
+                  },
+                  {
+                    "hour": "23",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 845
+                  }
+                ]
+              },
+              {
+                "label": "FTTH Logical",
+                "values": [
+                  {
+                    "hour": "00",
+                    "color": "green",
+                    "value": 12,
+                    "status": "optimal",
+                    "baseline": 15
+                  },
+                  {
+                    "hour": "01",
+                    "color": "green",
+                    "value": 24,
+                    "status": "optimal",
+                    "baseline": 27
+                  },
+                  {
+                    "hour": "02",
+                    "color": "green",
+                    "value": 27,
+                    "status": "optimal",
+                    "baseline": 33
+                  },
+                  {
+                    "hour": "03",
+                    "color": "green",
+                    "value": 29,
+                    "status": "optimal",
+                    "baseline": 38
+                  },
+                  {
+                    "hour": "04",
+                    "color": "green",
+                    "value": 31,
+                    "status": "optimal",
+                    "baseline": 42
+                  },
+                  {
+                    "hour": "05",
+                    "color": "green",
+                    "value": 32,
+                    "status": "optimal",
+                    "baseline": 46
+                  },
+                  {
+                    "hour": "06",
+                    "color": "green",
+                    "value": 37,
+                    "status": "optimal",
+                    "baseline": 50
+                  },
+                  {
+                    "hour": "07",
+                    "color": "green",
+                    "value": 50,
+                    "status": "optimal",
+                    "baseline": 57
+                  },
+                  {
+                    "hour": "08",
+                    "color": "green",
+                    "value": 57,
+                    "status": "optimal",
+                    "baseline": 73
+                  },
+                  {
+                    "hour": "09",
+                    "color": "green",
+                    "value": 74,
+                    "status": "optimal",
+                    "baseline": 94
+                  },
+                  {
+                    "hour": "10",
+                    "color": "green",
+                    "value": 90,
+                    "status": "optimal",
+                    "baseline": 113
+                  },
+                  {
+                    "hour": "11",
+                    "color": "green",
+                    "value": 111,
+                    "status": "optimal",
+                    "baseline": 136
+                  },
+                  {
+                    "hour": "12",
+                    "color": "green",
+                    "value": 130,
+                    "status": "optimal",
+                    "baseline": 158
+                  },
+                  {
+                    "hour": "13",
+                    "color": "green",
+                    "value": 164,
+                    "status": "optimal",
+                    "baseline": 183
+                  },
+                  {
+                    "hour": "14",
+                    "color": "green",
+                    "value": 197,
+                    "status": "optimal",
+                    "baseline": 214
+                  },
+                  {
+                    "hour": "15",
+                    "color": "green",
+                    "value": 221,
+                    "status": "optimal",
+                    "baseline": 240
+                  },
+                  {
+                    "hour": "16",
+                    "color": "green",
+                    "value": 239,
+                    "status": "optimal",
+                    "baseline": 271
+                  },
+                  {
+                    "hour": "17",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 308
+                  },
+                  {
+                    "hour": "18",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 341
+                  },
+                  {
+                    "hour": "19",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 376
+                  },
+                  {
+                    "hour": "20",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 406
+                  },
+                  {
+                    "hour": "21",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 440
+                  },
+                  {
+                    "hour": "22",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 464
+                  },
+                  {
+                    "hour": "23",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 480
+                  }
+                ]
+              },
+              {
+                "label": "Copper",
+                "values": [
+                  {
+                    "hour": "00",
+                    "color": "green",
+                    "value": 0,
+                    "status": "optimal",
+                    "baseline": 2
+                  },
+                  {
+                    "hour": "01",
+                    "color": "green",
+                    "value": 1,
+                    "status": "optimal",
+                    "baseline": 5
+                  },
+                  {
+                    "hour": "02",
+                    "color": "green",
+                    "value": 2,
+                    "status": "optimal",
+                    "baseline": 6
+                  },
+                  {
+                    "hour": "03",
+                    "color": "green",
+                    "value": 2,
+                    "status": "optimal",
+                    "baseline": 7
+                  },
+                  {
+                    "hour": "04",
+                    "color": "green",
+                    "value": 3,
+                    "status": "optimal",
+                    "baseline": 8
+                  },
+                  {
+                    "hour": "05",
+                    "color": "green",
+                    "value": 3,
+                    "status": "optimal",
+                    "baseline": 9
+                  },
+                  {
+                    "hour": "06",
+                    "color": "green",
+                    "value": 4,
+                    "status": "optimal",
+                    "baseline": 10
+                  },
+                  {
+                    "hour": "07",
+                    "color": "green",
+                    "value": 7,
+                    "status": "optimal",
+                    "baseline": 12
+                  },
+                  {
+                    "hour": "08",
+                    "color": "green",
+                    "value": 11,
+                    "status": "optimal",
+                    "baseline": 16
+                  },
+                  {
+                    "hour": "09",
+                    "color": "green",
+                    "value": 18,
+                    "status": "optimal",
+                    "baseline": 21
+                  },
+                  {
+                    "hour": "10",
+                    "color": "green",
+                    "value": 30,
+                    "status": "optimal",
+                    "baseline": 26
+                  },
+                  {
+                    "hour": "11",
+                    "color": "green",
+                    "value": 47,
+                    "status": "optimal",
+                    "baseline": 36
+                  },
+                  {
+                    "hour": "12",
+                    "color": "green",
+                    "value": 57,
+                    "status": "optimal",
+                    "baseline": 45
+                  },
+                  {
+                    "hour": "13",
+                    "color": "green",
+                    "value": 72,
+                    "status": "optimal",
+                    "baseline": 54
+                  },
+                  {
+                    "hour": "14",
+                    "color": "green",
+                    "value": 79,
+                    "status": "optimal",
+                    "baseline": 63
+                  },
+                  {
+                    "hour": "15",
+                    "color": "green",
+                    "value": 84,
+                    "status": "optimal",
+                    "baseline": 73
+                  },
+                  {
+                    "hour": "16",
+                    "color": "green",
+                    "value": 93,
+                    "status": "optimal",
+                    "baseline": 79
+                  },
+                  {
+                    "hour": "17",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 89
+                  },
+                  {
+                    "hour": "18",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 96
+                  },
+                  {
+                    "hour": "19",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 104
+                  },
+                  {
+                    "hour": "20",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 113
+                  },
+                  {
+                    "hour": "21",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 122
+                  },
+                  {
+                    "hour": "22",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 127
+                  },
+                  {
+                    "hour": "23",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 131
+                  }
+                ]
+              },
+              {
+                "label": "OLO",
+                "values": [
+                  {
+                    "hour": "00",
+                    "color": "green",
+                    "value": 8,
+                    "status": "optimal",
+                    "baseline": 12
+                  },
+                  {
+                    "hour": "01",
+                    "color": "green",
+                    "value": 10,
+                    "status": "optimal",
+                    "baseline": 27
+                  },
+                  {
+                    "hour": "02",
+                    "color": "green",
+                    "value": 13,
+                    "status": "optimal",
+                    "baseline": 35
+                  },
+                  {
+                    "hour": "03",
+                    "color": "green",
+                    "value": 13,
+                    "status": "optimal",
+                    "baseline": 40
+                  },
+                  {
+                    "hour": "04",
+                    "color": "green",
+                    "value": 13,
+                    "status": "optimal",
+                    "baseline": 42
+                  },
+                  {
+                    "hour": "05",
+                    "color": "green",
+                    "value": 14,
+                    "status": "optimal",
+                    "baseline": 45
+                  },
+                  {
+                    "hour": "06",
+                    "color": "green",
+                    "value": 16,
+                    "status": "optimal",
+                    "baseline": 48
+                  },
+                  {
+                    "hour": "07",
+                    "color": "green",
+                    "value": 66,
+                    "status": "optimal",
+                    "baseline": 53
+                  },
+                  {
+                    "hour": "08",
+                    "color": "green",
+                    "value": 78,
+                    "status": "optimal",
+                    "baseline": 56
+                  },
+                  {
+                    "hour": "09",
+                    "color": "green",
+                    "value": 86,
+                    "status": "optimal",
+                    "baseline": 65
+                  },
+                  {
+                    "hour": "10",
+                    "color": "green",
+                    "value": 103,
+                    "status": "optimal",
+                    "baseline": 79
+                  },
+                  {
+                    "hour": "11",
+                    "color": "red",
+                    "value": 130,
+                    "status": "critical",
+                    "baseline": 92
+                  },
+                  {
+                    "hour": "12",
+                    "color": "red",
+                    "value": 168,
+                    "status": "critical",
+                    "baseline": 104
+                  },
+                  {
+                    "hour": "13",
+                    "color": "red",
+                    "value": 190,
+                    "status": "critical",
+                    "baseline": 121
+                  },
+                  {
+                    "hour": "14",
+                    "color": "red",
+                    "value": 227,
+                    "status": "critical",
+                    "baseline": 137
+                  },
+                  {
+                    "hour": "15",
+                    "color": "red",
+                    "value": 251,
+                    "status": "critical",
+                    "baseline": 155
+                  },
+                  {
+                    "hour": "16",
+                    "color": "red",
+                    "value": 267,
+                    "status": "critical",
+                    "baseline": 176
+                  },
+                  {
+                    "hour": "17",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 199
+                  },
+                  {
+                    "hour": "18",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 218
+                  },
+                  {
+                    "hour": "19",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 244
+                  },
+                  {
+                    "hour": "20",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 269
+                  },
+                  {
+                    "hour": "21",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 288
+                  },
+                  {
+                    "hour": "22",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 345
+                  },
+                  {
+                    "hour": "23",
+                    "color": "green",
+                    "value": null,
+                    "status": "optimal",
+                    "baseline": 381
+                  }
+                ]
+              }
+            ],
+            "granularity": "hourly",
+            "window_hours": 24
+          },
+          "command_id": "complaint_intelligence",
+          "section_id": "complaint_performance",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "daily_trend": {
+            "points": [
+              {
+                "date": "2026-08-15",
+                "color": "green",
+                "actual": 1593,
+                "status": "optimal",
+                "baseline": 1710,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-16",
+                "color": "green",
+                "actual": 1743,
+                "status": "optimal",
+                "baseline": 1837,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-17",
+                "color": "green",
+                "actual": 1810,
+                "status": "optimal",
+                "baseline": 1681,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-18",
+                "color": "green",
+                "actual": 1561,
+                "status": "optimal",
+                "baseline": 1609,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-19",
+                "color": "green",
+                "actual": 1860,
+                "status": "optimal",
+                "baseline": 1685,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-20",
+                "color": "green",
+                "actual": 1887,
+                "status": "optimal",
+                "baseline": 1678,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-21",
+                "color": "green",
+                "actual": 1323,
+                "status": "optimal",
+                "baseline": 1307,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-22",
+                "color": "green",
+                "actual": 1627,
+                "status": "optimal",
+                "baseline": 1710,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-23",
+                "color": "green",
+                "actual": 2063,
+                "status": "optimal",
+                "baseline": 1837,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-24",
+                "color": "orange",
+                "actual": 1971,
+                "status": "warning",
+                "baseline": 1681,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-25",
+                "color": "green",
+                "actual": 1677,
+                "status": "optimal",
+                "baseline": 1609,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-26",
+                "color": "orange",
+                "actual": 1968,
+                "status": "warning",
+                "baseline": 1685,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-27",
+                "color": "green",
+                "actual": 1730,
+                "status": "optimal",
+                "baseline": 1678,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-28",
+                "color": "green",
+                "actual": 1449,
+                "status": "optimal",
+                "baseline": 1307,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-29",
+                "color": "orange",
+                "actual": 2031,
+                "status": "warning",
+                "baseline": 1710,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-30",
+                "color": "green",
+                "actual": 2036,
+                "status": "optimal",
+                "baseline": 1837,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-08-31",
+                "color": "green",
+                "actual": 1718,
+                "status": "optimal",
+                "baseline": 1681,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-01",
+                "color": "green",
+                "actual": 1713,
+                "status": "optimal",
+                "baseline": 1609,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-02",
+                "color": "green",
+                "actual": 1619,
+                "status": "optimal",
+                "baseline": 1685,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-03",
+                "color": "green",
+                "actual": 1554,
+                "status": "optimal",
+                "baseline": 1678,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-04",
+                "color": "green",
+                "actual": 1286,
+                "status": "optimal",
+                "baseline": 1307,
+                "active_event_ids": [
+                  30104
+                ]
+              },
+              {
+                "date": "2026-09-05",
+                "color": "green",
+                "actual": 1667,
+                "status": "optimal",
+                "baseline": 1710,
+                "active_event_ids": [
+                  26691,
+                  25017
+                ]
+              },
+              {
+                "date": "2026-09-06",
+                "color": "green",
+                "actual": 1768,
+                "status": "optimal",
+                "baseline": 1837,
+                "active_event_ids": [
+                  25034,
+                  25925
+                ]
+              },
+              {
+                "date": "2026-09-07",
+                "color": "green",
+                "actual": 1654,
+                "status": "optimal",
+                "baseline": 1681,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-08",
+                "color": "green",
+                "actual": 1546,
+                "status": "optimal",
+                "baseline": 1609,
+                "active_event_ids": [
+                  458320
+                ]
+              },
+              {
+                "date": "2026-09-09",
+                "color": "green",
+                "actual": 1484,
+                "status": "optimal",
+                "baseline": 1685,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-10",
+                "color": "green",
+                "actual": 1540,
+                "status": "optimal",
+                "baseline": 1678,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-11",
+                "color": "green",
+                "actual": 1242,
+                "status": "optimal",
+                "baseline": 1307,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-12",
+                "color": "green",
+                "actual": 1889,
+                "status": "optimal",
+                "baseline": 1710,
+                "active_event_ids": []
+              },
+              {
+                "date": "2026-09-13",
+                "color": "green",
+                "actual": 998,
+                "status": "optimal",
+                "baseline": 994,
+                "active_event_ids": [
+                  25911
+                ]
+              }
+            ],
+            "granularity": "daily",
+            "window_days": 30,
+            "baseline_mode": "moving_same_weekday"
+          },
+          "zone_number": "01",
+          "hourly_trend": {
+            "points": [
+              {
+                "hour": "00",
+                "color": "green",
+                "actual": 36,
+                "status": "optimal",
+                "baseline": 61,
+                "active_event_names": []
+              },
+              {
+                "hour": "01",
+                "color": "green",
+                "actual": 59,
+                "status": "optimal",
+                "baseline": 113,
+                "active_event_names": []
+              },
+              {
+                "hour": "02",
+                "color": "green",
+                "actual": 70,
+                "status": "optimal",
+                "baseline": 142,
+                "active_event_names": []
+              },
+              {
+                "hour": "03",
+                "color": "green",
+                "actual": 77,
+                "status": "optimal",
+                "baseline": 162,
+                "active_event_names": []
+              },
+              {
+                "hour": "04",
+                "color": "green",
+                "actual": 84,
+                "status": "optimal",
+                "baseline": 175,
+                "active_event_names": []
+              },
+              {
+                "hour": "05",
+                "color": "green",
+                "actual": 92,
+                "status": "optimal",
+                "baseline": 195,
+                "active_event_names": []
+              },
+              {
+                "hour": "06",
+                "color": "green",
+                "actual": 112,
+                "status": "optimal",
+                "baseline": 213,
+                "active_event_names": []
+              },
+              {
+                "hour": "07",
+                "color": "green",
+                "actual": 193,
+                "status": "optimal",
+                "baseline": 249,
+                "active_event_names": []
+              },
+              {
+                "hour": "08",
+                "color": "green",
+                "actual": 230,
+                "status": "optimal",
+                "baseline": 290,
+                "active_event_names": []
+              },
+              {
+                "hour": "09",
+                "color": "green",
+                "actual": 285,
+                "status": "optimal",
+                "baseline": 353,
+                "active_event_names": []
+              },
+              {
+                "hour": "10",
+                "color": "green",
+                "actual": 365,
+                "status": "optimal",
+                "baseline": 423,
+                "active_event_names": []
+              },
+              {
+                "hour": "11",
+                "color": "green",
+                "actual": 462,
+                "status": "optimal",
+                "baseline": 507,
+                "active_event_names": []
+              },
+              {
+                "hour": "12",
+                "color": "green",
+                "actual": 553,
+                "status": "optimal",
+                "baseline": 586,
+                "active_event_names": []
+              },
+              {
+                "hour": "13",
+                "color": "green",
+                "actual": 669,
+                "status": "optimal",
+                "baseline": 680,
+                "active_event_names": []
+              },
+              {
+                "hour": "14",
+                "color": "green",
+                "actual": 802,
+                "status": "optimal",
+                "baseline": 783,
+                "active_event_names": []
+              },
+              {
+                "hour": "15",
+                "color": "green",
+                "actual": 901,
+                "status": "optimal",
+                "baseline": 880,
+                "active_event_names": []
+              },
+              {
+                "hour": "16",
+                "color": "green",
+                "actual": 998,
+                "status": "optimal",
+                "baseline": 994,
+                "active_event_names": []
+              },
+              {
+                "hour": "17",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1128,
+                "active_event_names": []
+              },
+              {
+                "hour": "18",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1249,
+                "active_event_names": []
+              },
+              {
+                "hour": "19",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1387,
+                "active_event_names": [
+                  "Manchester United vs Manchester City"
+                ]
+              },
+              {
+                "hour": "20",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1508,
+                "active_event_names": [
+                  "Manchester United vs Manchester City"
+                ]
+              },
+              {
+                "hour": "21",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1623,
+                "active_event_names": []
+              },
+              {
+                "hour": "22",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1747,
+                "active_event_names": []
+              },
+              {
+                "hour": "23",
+                "color": "green",
+                "actual": null,
+                "status": "optimal",
+                "baseline": 1837,
+                "active_event_names": []
+              }
+            ],
+            "granularity": "hourly",
+            "window_hours": 24,
+            "baseline_mode": "moving_same_weekday"
+          },
+          "command_order": 2
+        },
+        {
+          "kpis": [
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Created Tickets",
+              "value": 998,
+              "kpi_id": "journey_created_tickets",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 994,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 4,
+                "direction": "lower_is_better",
+                "percentage": 0
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Total Open",
+              "value": 1305,
+              "kpi_id": "journey_total_open",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": null,
+                "end_rule": "current_snapshot"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 1205,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 100,
+                "direction": "lower_is_better",
+                "percentage": 8
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Aged >24 Hours",
+              "value": 308,
+              "kpi_id": "journey_aged_over_24h",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": null,
+                "end_rule": "current_snapshot"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 323,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -15,
+                "direction": "lower_is_better",
+                "percentage": -5
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Total Closure",
+              "value": 780,
+              "kpi_id": "journey_total_closure",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 896,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -116,
+                "direction": "higher_is_better",
+                "percentage": -13
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Single Referral Closure",
+              "value": 653,
+              "kpi_id": "journey_single_referral_closure",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 755,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -0.3,
+                "direction": "higher_is_better",
+                "percentage": -0.3
+              },
+              "sample_size": 695
+            }
+          ],
+          "color": "green",
+          "order": 2,
+          "state": "ok",
+          "title": "Customer Journey Health",
+          "status": "optimal",
+          "command_id": "complaint_intelligence",
+          "section_id": "customer_journey_kpis",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "zone_number": "01",
+          "health_score": {
+            "mode": "calculated",
+            "note": "Calculated composite score v2 (2026-08-18) -- demand-adjusted load absorption (Closure/Created coverage vs baseline coverage), aged-ticket exposure as a share of live Total Open against a real baseline-derived anchor, and a Bayesian-shrunk First-Referral rate against its own baseline -- weighted 30/30/20 renormalized (no CCC KPI at journey level). See journey_health_score above and coap_raw_events.team_score_v2. Interim stand-in for AI scoring (sql/12_team_performance_ai_prompt.sql).",
+            "basis": [
+              "journey_created_tickets",
+              "journey_total_closure",
+              "journey_single_referral_closure",
+              "journey_aged_over_24h"
+            ],
+            "color": "green",
+            "value": 95,
+            "status": "optimal"
+          },
+          "command_order": 2
+        },
+        {
+          "kpis": [
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Closure",
+              "value": 186,
+              "kpi_id": "team_closure",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "SOC-T2",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 190,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -4,
+                "direction": "higher_is_better",
+                "percentage": -2
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "orange",
+              "label": "Closure",
+              "value": 332,
+              "kpi_id": "team_closure",
+              "status": "warning",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "CSDD",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 398,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -66,
+                "direction": "higher_is_better",
+                "percentage": -17
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "orange",
+              "label": "Closure",
+              "value": 177,
+              "kpi_id": "team_closure",
+              "status": "warning",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "FOC",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 213,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -36,
+                "direction": "higher_is_better",
+                "percentage": -17
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Aged Tickets",
+              "value": 13,
+              "kpi_id": "team_aged_tickets",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": null,
+                "end_rule": "current_snapshot"
+              },
+              "team_id": "SOC-T2",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 22,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -9,
+                "direction": "lower_is_better",
+                "percentage": -41
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Aged Tickets",
+              "value": 152,
+              "kpi_id": "team_aged_tickets",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": null,
+                "end_rule": "current_snapshot"
+              },
+              "team_id": "CSDD",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 185,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -33,
+                "direction": "lower_is_better",
+                "percentage": -18
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Aged Tickets",
+              "value": 53,
+              "kpi_id": "team_aged_tickets",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": null,
+                "end_rule": "current_snapshot"
+              },
+              "team_id": "FOC",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 96,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -43,
+                "direction": "lower_is_better",
+                "percentage": -45
+              }
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "count": 186,
+              "label": "First-Referral Closure Rate",
+              "value": "100.0%",
+              "kpi_id": "team_first_referral_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "SOC-T2",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 190,
+                "value": "100.0%",
+                "sample_size": 190,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 0.0,
+                "direction": "higher_is_better",
+                "percentage": 0.0
+              },
+              "sample_size": 186
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "count": 305,
+              "label": "First-Referral Closure Rate",
+              "value": "91.9%",
+              "kpi_id": "team_first_referral_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "CSDD",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 366,
+                "value": "92.0%",
+                "sample_size": 398,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -0.1,
+                "direction": "higher_is_better",
+                "percentage": -0.1
+              },
+              "sample_size": 332
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "count": 162,
+              "label": "First-Referral Closure Rate",
+              "value": "91.5%",
+              "kpi_id": "team_first_referral_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "FOC",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 198,
+                "value": "93.0%",
+                "sample_size": 213,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -1.5,
+                "direction": "higher_is_better",
+                "percentage": -1.6
+              },
+              "sample_size": 177
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "count": 186,
+              "label": "Closure Rate",
+              "value": "32.0%",
+              "kpi_id": "team_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "SOC-T2",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 190,
+                "value": "29.1%",
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 2.9,
+                "direction": "higher_is_better",
+                "percentage": null
+              },
+              "total_at_stage": 581
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "count": 364,
+              "label": "Closure Rate",
+              "value": "29.0%",
+              "kpi_id": "team_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "CSDD",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 437,
+                "value": "31.6%",
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -2.6,
+                "direction": "higher_is_better",
+                "percentage": null
+              },
+              "total_at_stage": 1256
+            },
+            {
+              "unit": "%",
+              "color": "green",
+              "count": 181,
+              "label": "Closure Rate",
+              "value": "42.9%",
+              "kpi_id": "team_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "FOC",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 218,
+                "value": "46.5%",
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -3.6,
+                "direction": "higher_is_better",
+                "percentage": null
+              },
+              "total_at_stage": 422
+            }
+          ],
+          "color": "green",
+          "order": 3,
+          "state": "ok",
+          "title": "Team Handling Efficiency",
+          "status": "optimal",
+          "command_id": "complaint_intelligence",
+          "section_id": "team_kpis",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "team_scores": {
+            "mode": "calculated",
+            "note": "Calculated composite score v2 -- demand-adjusted load absorption (closures/inflow vs baseline coverage), aged-ticket exposure as a share of actionable open tickets against each team's own real baseline-derived anchor, and a Bayesian-shrunk First-Referral rate against its own baseline -- weighted 30/30/20 (load/aged/referral) renormalized, global across teams. CCC REMOVED 2026-08-19, direct instruction. See team_score_today above and coap_raw_events.team_score_v2. Interim stand-in for AI scoring (sql/12_team_performance_ai_prompt.sql).",
+            "scores": [
+              {
+                "color": "green",
+                "score": 100,
+                "status": "optimal",
+                "team_id": "SOC-T2"
+              },
+              {
+                "color": "green",
+                "score": 100,
+                "status": "optimal",
+                "team_id": "CSDD"
+              },
+              {
+                "color": "green",
+                "score": 98,
+                "status": "optimal",
+                "team_id": "FOC"
+              }
+            ]
+          },
+          "zone_number": "01",
+          "command_order": 2
+        },
+        {
+          "color": "green",
+          "order": 4,
+          "state": "ok",
+          "title": "Active Events (Possible Risk)",
+          "events": [
+            {
+              "risk": "unscored",
+              "type": "MDT",
+              "color": "green",
+              "status": "optimal",
+              "latitude": null,
+              "location": "JEDDAH",
+              "operator": "STC",
+              "start_at": "2026-09-13T00:00:00+03:00",
+              "longitude": null,
+              "reference": "CRQ000001257159",
+              "impacted_services": 126
+            }
+          ],
+          "status": "optimal",
+          "command_id": "complaint_intelligence",
+          "section_id": "active_events",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "zone_number": "01",
+          "command_order": 2
+        },
+        {
+          "note": null,
+          "color": "green",
+          "order": 6,
+          "state": "ok",
+          "title": "AI RCA Insights",
+          "status": "optimal",
+          "command_id": "complaint_intelligence",
+          "output_key": "2026-09-13_17",
+          "section_id": "ai_rca_insights",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "zone_number": "01",
+          "generated_at": "2026-09-13T17:18:03+03:00",
+          "command_order": 2,
+          "selected_date": "2026-09-13",
+          "selected_hour": 17,
+          "anomaly_status": "NO_QUALIFYING_INCREASE",
+          "ai_section_html": "<section class=\"ai-anomaly-section\" data-analysis-id=\"b9742248-1526-40e5-8596-78ee1ecee79b\">\n  <div class=\"ai-executive-summary\">\n    <h3 class=\"ai-summary-text\">Executive Summary: Network load remains broadly stable versus baseline, with no qualifying district increases detected.</h3>\n  </div>\n  <p class=\"ai-calendar-context\">Calendar context: Manchester United vs Manchester City</p>\n  <div class=\"ai-findings\">\n    <h3>Findings</h3>\n    <p class=\"ai-findings-empty\">No qualifying district findings.</p>\n  </div>\n  <div class=\"ai-evidence-narration\">No district met the qualifying-increase criteria. The heatmap shows absolute and percentage incident-count deviations across 19 districts against the active baseline through hour 17 on 2026-09-13.</div>\n<section class=\"ai-evidence-chart ai-heatmap\" data-chart-id=\"chart_heatmap_001\"><style>.ai-heatmap{background:#07182d;border:1px solid rgba(80,190,245,0.23);border-radius:10px;padding:14px 16px;margin:12px 0;}.ai-heatmap .hm-figure{margin:0;}.ai-heatmap .hm-title{color:#f3f8ff;font:600 13px system-ui,sans-serif;margin:0 0 8px 0;}.ai-heatmap .hm-count{color:#8ea7be;font-weight:400;}.ai-heatmap .hm-legend{display:flex;flex-wrap:wrap;gap:14px;color:#8ea7be;font:11px system-ui,sans-serif;margin:0 0 10px 0;}.ai-heatmap .hm-key{display:inline-flex;align-items:center;gap:6px;}.ai-heatmap .hm-swatch{display:inline-block;width:12px;height:12px;border-radius:2px;border:1px solid rgba(80,190,245,0.23);}.ai-heatmap .hm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}.ai-heatmap .hm-card{border:1px solid rgba(80,190,245,0.23);border-radius:8px;padding:8px 10px;color:#f3f8ff;font:12px system-ui,sans-serif;min-width:0;}.ai-heatmap .hm-name{font-size:17px;font-weight:700;line-height:1.15;overflow-wrap:anywhere;}.ai-heatmap .hm-pct{font-size:13px;font-weight:600;margin:2px 0;}.ai-heatmap .hm-metrics{font-size:11px;}.ai-heatmap .hm-contributor{font-size:11px;margin-top:4px;}</style><figure class=\"hm-figure\"><figcaption class=\"hm-title\">District incident deviations <span class=\"hm-count\">19 districts</span></figcaption><div class=\"hm-legend\"><span class=\"hm-key\"><span class=\"hm-swatch\" style=\"background:#ff7291;\"></span>Above baseline</span><span class=\"hm-key\"><span class=\"hm-swatch\" style=\"background:#09213c;\"></span>Equal to baseline</span><span class=\"hm-key\"><span class=\"hm-swatch\" style=\"background:#45d8f4;\"></span>Below baseline</span><span class=\"hm-key\"><span class=\"hm-swatch\" style=\"background:#020812;border-style:dashed;\"></span>Unavailable</span></div><div class=\"hm-grid\"><div class=\"hm-card hm-red\" style=\"background:#ff7291;color:#06172d;\"><div class=\"hm-name\">Yanbu</div><div class=\"hm-pct\">+1290.5%</div><div class=\"hm-metrics\">abs 67.75 &middot; current 73 &middot; baseline 5.25</div></div><div class=\"hm-card hm-red\" style=\"background:#ff7291;color:#06172d;\"><div class=\"hm-name\">Jeddah</div><div class=\"hm-pct\">+13.0%</div><div class=\"hm-metrics\">abs 20.25 &middot; current 176 &middot; baseline 155.75</div></div><div class=\"hm-card hm-above\" style=\"background:#3e423b;color:#f3f8ff;\"><div class=\"hm-name\">Qassim</div><div class=\"hm-pct\">+22.4%</div><div class=\"hm-metrics\">abs 5.50 &middot; current 30 &middot; baseline 24.50</div></div><div class=\"hm-card hm-above\" style=\"background:#656044;color:#f3f8ff;\"><div class=\"hm-name\">Riyadh Districts</div><div class=\"hm-pct\">+38.2%</div><div class=\"hm-metrics\">abs 5.25 &middot; current 19 &middot; baseline 13.75</div></div><div class=\"hm-card hm-above\" style=\"background:#cdb15e;color:#06172d;\"><div class=\"hm-name\">Arar</div><div class=\"hm-pct\">+80.0%</div><div class=\"hm-metrics\">abs 4 &middot; current 9 &middot; baseline 5</div></div><div class=\"hm-card hm-above\" style=\"background:#535240;color:#f3f8ff;\"><div class=\"hm-name\">Tabuk</div><div class=\"hm-pct\">+30.8%</div><div class=\"hm-metrics\">abs 4 &middot; current 17 &middot; baseline 13</div></div><div class=\"hm-card hm-above\" style=\"background:#0e1d2f;color:#f3f8ff;\"><div class=\"hm-name\">Madinah</div><div class=\"hm-pct\">+3.1%</div><div class=\"hm-metrics\">abs 1.25 &middot; current 42 &middot; baseline 40.75</div></div><div class=\"hm-card hm-below\" style=\"background:#0c293f;color:#f3f8ff;\"><div class=\"hm-name\">Al Jouf</div><div class=\"hm-pct\">−9.1%</div><div class=\"hm-metrics\">abs -0.50 &middot; current 5 &middot; baseline 5.50</div></div><div class=\"hm-card hm-below\" style=\"background:#07192f;color:#f3f8ff;\"><div class=\"hm-name\">Makkah</div><div class=\"hm-pct\">−1.1%</div><div class=\"hm-metrics\">abs -0.50 &middot; current 43 &middot; baseline 43.50</div></div><div class=\"hm-card hm-below\" style=\"background:#0e3047;color:#f3f8ff;\"><div class=\"hm-name\">Najran</div><div class=\"hm-pct\">−13.0%</div><div class=\"hm-metrics\">abs -0.75 &middot; current 5 &middot; baseline 5.75</div></div><div class=\"hm-card hm-below\" style=\"background:#319ab4;color:#06172d;\"><div class=\"hm-name\">Baha</div><div class=\"hm-pct\">−68.0%</div><div class=\"hm-metrics\">abs -4.25 &middot; current 2 &middot; baseline 6.25</div></div><div class=\"hm-card hm-below\" style=\"background:#0a233a;color:#f3f8ff;\"><div class=\"hm-name\">Dammam</div><div class=\"hm-pct\">−6.4%</div><div class=\"hm-metrics\">abs -5.50 &middot; current 81 &middot; baseline 86.50</div></div><div class=\"hm-card hm-below\" style=\"background:#174b62;color:#f3f8ff;\"><div class=\"hm-name\">Al Ahsa</div><div class=\"hm-pct\">−26.9%</div><div class=\"hm-metrics\">abs -6.25 &middot; current 17 &middot; baseline 23.25</div></div><div class=\"hm-card hm-below\" style=\"background:#174b62;color:#f3f8ff;\"><div class=\"hm-name\">Jizan</div><div class=\"hm-pct\">−26.9%</div><div class=\"hm-metrics\">abs -6.25 &middot; current 17 &middot; baseline 23.25</div></div><div class=\"hm-card hm-below\" style=\"background:#184d65;color:#f3f8ff;\"><div class=\"hm-name\">Taif</div><div class=\"hm-pct\">−27.9%</div><div class=\"hm-metrics\">abs -7.75 &middot; current 20 &middot; baseline 27.75</div></div><div class=\"hm-card hm-below\" style=\"background:#329db7;color:#06172d;\"><div class=\"hm-name\">Hail</div><div class=\"hm-pct\">−69.2%</div><div class=\"hm-metrics\">abs -9 &middot; current 4 &middot; baseline 13</div></div><div class=\"hm-card hm-below\" style=\"background:#20657e;color:#f3f8ff;\"><div class=\"hm-name\">Jubail</div><div class=\"hm-pct\">−40.6%</div><div class=\"hm-metrics\">abs -13 &middot; current 19 &middot; baseline 32</div></div><div class=\"hm-card hm-below\" style=\"background:#1c5a72;color:#f3f8ff;\"><div class=\"hm-name\">Asir</div><div class=\"hm-pct\">−34.8%</div><div class=\"hm-metrics\">abs -15.50 &middot; current 29 &middot; baseline 44.50</div></div><div class=\"hm-card hm-below\" style=\"background:#144159;color:#f3f8ff;\"><div class=\"hm-name\">Riyadh</div><div class=\"hm-pct\">−22.0%</div><div class=\"hm-metrics\">abs -97.50 &middot; current 346 &middot; baseline 443.50</div></div></div></figure></section>\n</section>"
+        },
+        {
+          "color": "green",
+          "order": 7,
+          "state": "ok",
+          "title": "Load History Analysis",
+          "status": "optimal",
+          "command_id": "complaint_intelligence",
+          "section_id": "load_history_analysis",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "zone_number": "01",
+          "command_order": 2,
+          "overall_complaints": {
+            "color": "green",
+            "points": [
+              {
+                "day": "Fri",
+                "date": "2026-09-04",
+                "color": "green",
+                "actual": 1286,
+                "events": [
+                  {
+                    "name": "Notable rain — Asir",
+                    "color": "#2a78d6",
+                    "event_id": 1539643,
+                    "severity": "critical",
+                    "event_type": "weather.rain",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  },
+                  {
+                    "name": "Students back to school 2026",
+                    "color": "#eda100",
+                    "event_id": 30104,
+                    "severity": "high",
+                    "event_type": "school.back_to_school_students",
+                    "is_end_day": true,
+                    "is_start_day": false
+                  }
+                ],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1206,
+                "event_count": 2,
+                "is_event_day": true,
+                "top_event_severity": "critical"
+              },
+              {
+                "day": "Sat",
+                "date": "2026-09-05",
+                "color": "green",
+                "actual": 1667,
+                "events": [],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1635,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Sun",
+                "date": "2026-09-06",
+                "color": "green",
+                "actual": 1768,
+                "events": [],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1730,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Mon",
+                "date": "2026-09-07",
+                "color": "green",
+                "actual": 1654,
+                "events": [
+                  {
+                    "name": "Moderate rain — Baha",
+                    "color": "#2a78d6",
+                    "event_id": 1569836,
+                    "severity": "high",
+                    "event_type": "weather.rain",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  }
+                ],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1703,
+                "event_count": 1,
+                "is_event_day": true,
+                "top_event_severity": "high"
+              },
+              {
+                "day": "Tue",
+                "date": "2026-09-08",
+                "color": "green",
+                "actual": 1546,
+                "events": [
+                  {
+                    "name": "Champions League Start",
+                    "color": "#eb6834",
+                    "event_id": 458320,
+                    "severity": "critical",
+                    "event_type": "sport.football_season_start",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  },
+                  {
+                    "name": "Moderate rain — Asir",
+                    "color": "#2a78d6",
+                    "event_id": 1581275,
+                    "severity": "high",
+                    "event_type": "weather.rain",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  },
+                  {
+                    "name": "Moderate rain — Baha",
+                    "color": "#2a78d6",
+                    "event_id": 1581276,
+                    "severity": "high",
+                    "event_type": "weather.rain",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  }
+                ],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1674,
+                "event_count": 3,
+                "is_event_day": true,
+                "top_event_severity": "critical"
+              },
+              {
+                "day": "Wed",
+                "date": "2026-09-09",
+                "color": "green",
+                "actual": 1484,
+                "events": [],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1644,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Thu",
+                "date": "2026-09-10",
+                "color": "green",
+                "actual": 1540,
+                "events": [],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1530,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Fri",
+                "date": "2026-09-11",
+                "color": "green",
+                "actual": 1242,
+                "events": [],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1201,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Sat",
+                "date": "2026-09-12",
+                "color": "orange",
+                "actual": 1889,
+                "events": [
+                  {
+                    "name": "Moderate rain — Asir",
+                    "color": "#2a78d6",
+                    "event_id": 1620026,
+                    "severity": "high",
+                    "event_type": "weather.rain",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  }
+                ],
+                "status": "warning",
+                "is_future": false,
+                "predicted": 1573,
+                "event_count": 1,
+                "is_event_day": true,
+                "top_event_severity": "high"
+              },
+              {
+                "day": "Sun",
+                "date": "2026-09-13",
+                "color": "green",
+                "actual": 998,
+                "events": [],
+                "status": "healthy",
+                "is_future": false,
+                "predicted": 1992,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Mon",
+                "date": "2026-09-14",
+                "color": "gray",
+                "actual": null,
+                "events": [],
+                "status": "neutral",
+                "is_future": true,
+                "predicted": 1860,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Tue",
+                "date": "2026-09-15",
+                "color": "gray",
+                "actual": null,
+                "events": [
+                  {
+                    "name": "Moderate rain — Asir",
+                    "color": "#2a78d6",
+                    "event_id": 1631271,
+                    "severity": "high",
+                    "event_type": "weather.rain",
+                    "is_end_day": true,
+                    "is_start_day": true
+                  }
+                ],
+                "status": "neutral",
+                "is_future": true,
+                "predicted": 1821,
+                "event_count": 1,
+                "is_event_day": true,
+                "top_event_severity": "high"
+              },
+              {
+                "day": "Wed",
+                "date": "2026-09-16",
+                "color": "gray",
+                "actual": null,
+                "events": [],
+                "status": "neutral",
+                "is_future": true,
+                "predicted": 1795,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Thu",
+                "date": "2026-09-17",
+                "color": "gray",
+                "actual": null,
+                "events": [],
+                "status": "neutral",
+                "is_future": true,
+                "predicted": 1657,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              },
+              {
+                "day": "Fri",
+                "date": "2026-09-18",
+                "color": "gray",
+                "actual": null,
+                "events": [],
+                "status": "neutral",
+                "is_future": true,
+                "predicted": 1258,
+                "event_count": 0,
+                "is_event_day": false,
+                "top_event_severity": null
+              }
+            ],
+            "status": "healthy",
+            "summary": {
+              "actual_total": 15074,
+              "predicted_total": 15888,
+              "prediction_error_pct": -5.1,
+              "prediction_error_absolute": -814
+            },
+            "window_end": "2026-09-18",
+            "future_days": 5,
+            "granularity": "daily",
+            "window_days": 15,
+            "actual_grain": "reopen_cycle",
+            "window_start": "2026-09-04",
+            "actual_source": "coap_raw_events.bts_v_b2c_team_cycles",
+            "event_windows": [
+              {
+                "name": "Notable rain — Asir",
+                "color": "#2a78d6",
+                "label": "NOTABLE RAIN — ASIR",
+                "scope": "district",
+                "end_ts": "2026-09-04T18:00:00+03:00",
+                "name_ar": null,
+                "category": "weather",
+                "event_id": 1539643,
+                "severity": "critical",
+                "start_ts": "2026-09-04T11:00:00+03:00",
+                "end_index": 0,
+                "event_type": "weather.rain",
+                "impact_rank": 50,
+                "start_index": 0,
+                "is_estimated": false,
+                "band_end_date": "2026-09-04",
+                "days_in_window": 1,
+                "duration_hours": 7.0,
+                "band_start_date": "2026-09-04",
+                "ends_after_window": false,
+                "announcement_status": "confirmed",
+                "starts_before_window": false
+              },
+              {
+                "name": "Students back to school 2026",
+                "color": "#eda100",
+                "label": "STUDENTS BACK TO SCHOOL 2026",
+                "scope": "national",
+                "end_ts": "2026-09-05T00:00:00+03:00",
+                "name_ar": null,
+                "category": "school",
+                "event_id": 30104,
+                "severity": "high",
+                "start_ts": "2026-08-23T00:00:00+03:00",
+                "end_index": 0,
+                "event_type": "school.back_to_school_students",
+                "impact_rank": 80,
+                "start_index": 0,
+                "is_estimated": true,
+                "band_end_date": "2026-09-04",
+                "days_in_window": 1,
+                "duration_hours": 312.0,
+                "band_start_date": "2026-09-04",
+                "ends_after_window": false,
+                "announcement_status": "predicted",
+                "starts_before_window": true
+              },
+              {
+                "name": "Moderate rain — Baha",
+                "color": "#2a78d6",
+                "label": "MODERATE RAIN — BAHA",
+                "scope": "district",
+                "end_ts": "2026-09-07T21:00:00+03:00",
+                "name_ar": null,
+                "category": "weather",
+                "event_id": 1569836,
+                "severity": "high",
+                "start_ts": "2026-09-07T11:00:00+03:00",
+                "end_index": 3,
+                "event_type": "weather.rain",
+                "impact_rank": 70,
+                "start_index": 3,
+                "is_estimated": false,
+                "band_end_date": "2026-09-07",
+                "days_in_window": 1,
+                "duration_hours": 10.0,
+                "band_start_date": "2026-09-07",
+                "ends_after_window": false,
+                "announcement_status": "confirmed",
+                "starts_before_window": false
+              },
+              {
+                "name": "Champions League Start",
+                "color": "#eb6834",
+                "label": "CHAMPIONS LEAGUE START",
+                "scope": "national",
+                "end_ts": "2026-09-08T23:59:59.999+03:00",
+                "name_ar": "بداية دوري الأبطال",
+                "category": "sport",
+                "event_id": 458320,
+                "severity": "critical",
+                "start_ts": "2026-09-08T00:00:00+03:00",
+                "end_index": 4,
+                "event_type": "sport.football_season_start",
+                "impact_rank": 90,
+                "start_index": 4,
+                "is_estimated": false,
+                "band_end_date": "2026-09-08",
+                "days_in_window": 1,
+                "duration_hours": 24.0,
+                "band_start_date": "2026-09-08",
+                "ends_after_window": false,
+                "announcement_status": "confirmed",
+                "starts_before_window": false
+              },
+              {
+                "name": "Moderate rain — Asir",
+                "color": "#2a78d6",
+                "label": "MODERATE RAIN — ASIR",
+                "scope": "district",
+                "end_ts": "2026-09-08T18:00:00+03:00",
+                "name_ar": null,
+                "category": "weather",
+                "event_id": 1581275,
+                "severity": "high",
+                "start_ts": "2026-09-08T12:00:00+03:00",
+                "end_index": 4,
+                "event_type": "weather.rain",
+                "impact_rank": 70,
+                "start_index": 4,
+                "is_estimated": true,
+                "band_end_date": "2026-09-08",
+                "days_in_window": 1,
+                "duration_hours": 6.0,
+                "band_start_date": "2026-09-08",
+                "ends_after_window": false,
+                "announcement_status": "predicted",
+                "starts_before_window": false
+              },
+              {
+                "name": "Moderate rain — Baha",
+                "color": "#2a78d6",
+                "label": "MODERATE RAIN — BAHA",
+                "scope": "district",
+                "end_ts": "2026-09-08T18:00:00+03:00",
+                "name_ar": null,
+                "category": "weather",
+                "event_id": 1581276,
+                "severity": "high",
+                "start_ts": "2026-09-08T12:00:00+03:00",
+                "end_index": 4,
+                "event_type": "weather.rain",
+                "impact_rank": 70,
+                "start_index": 4,
+                "is_estimated": true,
+                "band_end_date": "2026-09-08",
+                "days_in_window": 1,
+                "duration_hours": 6.0,
+                "band_start_date": "2026-09-08",
+                "ends_after_window": false,
+                "announcement_status": "predicted",
+                "starts_before_window": false
+              },
+              {
+                "name": "Moderate rain — Asir",
+                "color": "#2a78d6",
+                "label": "MODERATE RAIN — ASIR",
+                "scope": "district",
+                "end_ts": "2026-09-12T16:00:00+03:00",
+                "name_ar": null,
+                "category": "weather",
+                "event_id": 1620026,
+                "severity": "high",
+                "start_ts": "2026-09-12T14:00:00+03:00",
+                "end_index": 8,
+                "event_type": "weather.rain",
+                "impact_rank": 70,
+                "start_index": 8,
+                "is_estimated": true,
+                "band_end_date": "2026-09-12",
+                "days_in_window": 1,
+                "duration_hours": 2.0,
+                "band_start_date": "2026-09-12",
+                "ends_after_window": false,
+                "announcement_status": "predicted",
+                "starts_before_window": false
+              },
+              {
+                "name": "Moderate rain — Asir",
+                "color": "#2a78d6",
+                "label": "MODERATE RAIN — ASIR",
+                "scope": "district",
+                "end_ts": "2026-09-15T19:00:00+03:00",
+                "name_ar": null,
+                "category": "weather",
+                "event_id": 1631271,
+                "severity": "high",
+                "start_ts": "2026-09-15T16:00:00+03:00",
+                "end_index": 11,
+                "event_type": "weather.rain",
+                "impact_rank": 70,
+                "start_index": 11,
+                "is_estimated": true,
+                "band_end_date": "2026-09-15",
+                "days_in_window": 1,
+                "duration_hours": 3.0,
+                "band_start_date": "2026-09-15",
+                "ends_after_window": false,
+                "announcement_status": "predicted",
+                "starts_before_window": false
+              }
+            ],
+            "today_data_hour": 16,
+            "actual_time_basis": "cycle_open_at_riyadh",
+            "event_color_basis": "event_type",
+            "prediction_source": "coap_raw_wfms.wfms_loadvision.predicted_outcome",
+            "today_actual_rule": "last_non_null_hourly_actual",
+            "today_actual_source": "coap_raw_events.bts_v_complaint_hourly_trend"
+          },
+          "journey_health_index": {
+            "mode": "pending_ai_scoring",
+            "note": "Not yet wired up -- companion history to customer_journey_kpis.health_score (see journey_health_score_agg).",
+            "points": [],
+            "window_days": 7
+          },
+          "team_efficiency_history": {
+            "color": "green",
+            "teams": [
+              {
+                "color": "green",
+                "status": "optimal",
+                "metrics": [
+                  {
+                    "unit": "tickets",
+                    "color": "green",
+                    "label": "Closure",
+                    "kpi_id": "team_closure",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 386,
+                        "status": "optimal",
+                        "baseline": 392
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 381,
+                        "status": "optimal",
+                        "baseline": 391
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 359,
+                        "status": "optimal",
+                        "baseline": 364
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 361,
+                        "status": "optimal",
+                        "baseline": 393
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 373,
+                        "status": "optimal",
+                        "baseline": 382
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 281,
+                        "status": "optimal",
+                        "baseline": 314
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 429,
+                        "status": "optimal",
+                        "baseline": 360
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "tickets",
+                    "color": "green",
+                    "label": "Aged Tickets",
+                    "kpi_id": "team_aged_tickets",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 9,
+                        "status": "optimal",
+                        "baseline": 17
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 15,
+                        "status": "optimal",
+                        "baseline": 21
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 11,
+                        "status": "optimal",
+                        "baseline": 18
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 11,
+                        "status": "optimal",
+                        "baseline": 17
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 9,
+                        "status": "optimal",
+                        "baseline": 22
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 10,
+                        "status": "optimal",
+                        "baseline": 20
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 13,
+                        "status": "optimal",
+                        "baseline": 19
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "%",
+                    "color": "green",
+                    "label": "First-Referral Closure Rate",
+                    "kpi_id": "team_first_referral_closure_rate",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "count": 384,
+                        "actual": "99.5%",
+                        "status": "optimal",
+                        "baseline": "99.5%",
+                        "sample_size": 386,
+                        "baseline_count": 390,
+                        "baseline_sample_size": 392
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "count": 381,
+                        "actual": "100.0%",
+                        "status": "optimal",
+                        "baseline": "99.7%",
+                        "sample_size": 381,
+                        "baseline_count": 390,
+                        "baseline_sample_size": 391
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "count": 359,
+                        "actual": "100.0%",
+                        "status": "optimal",
+                        "baseline": "99.7%",
+                        "sample_size": 359,
+                        "baseline_count": 363,
+                        "baseline_sample_size": 364
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "count": 361,
+                        "actual": "100.0%",
+                        "status": "optimal",
+                        "baseline": "100.0%",
+                        "sample_size": 361,
+                        "baseline_count": 393,
+                        "baseline_sample_size": 393
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "count": 373,
+                        "actual": "100.0%",
+                        "status": "optimal",
+                        "baseline": "100.0%",
+                        "sample_size": 373,
+                        "baseline_count": 382,
+                        "baseline_sample_size": 382
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "count": 280,
+                        "actual": "99.6%",
+                        "status": "optimal",
+                        "baseline": "99.7%",
+                        "sample_size": 281,
+                        "baseline_count": 313,
+                        "baseline_sample_size": 314
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "count": 428,
+                        "actual": "99.8%",
+                        "status": "optimal",
+                        "baseline": "100.0%",
+                        "sample_size": 429,
+                        "baseline_count": 360,
+                        "baseline_sample_size": 360
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "score",
+                    "color": "green",
+                    "label": "Performance Score",
+                    "kpi_id": "team_performance_score",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 99,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 98,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 99,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 95,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 99,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 94,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      }
+                    ],
+                    "status": "optimal"
+                  }
+                ],
+                "team_id": "SOC-T2"
+              },
+              {
+                "color": "green",
+                "status": "optimal",
+                "metrics": [
+                  {
+                    "unit": "tickets",
+                    "color": "green",
+                    "label": "Closure",
+                    "kpi_id": "team_closure",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 913,
+                        "status": "optimal",
+                        "baseline": 937
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 961,
+                        "status": "optimal",
+                        "baseline": 889
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 851,
+                        "status": "optimal",
+                        "baseline": 851
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 803,
+                        "status": "optimal",
+                        "baseline": 850
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 820,
+                        "status": "optimal",
+                        "baseline": 828
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 629,
+                        "status": "optimal",
+                        "baseline": 626
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 795,
+                        "status": "optimal",
+                        "baseline": 828
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "tickets",
+                    "color": "green",
+                    "label": "Aged Tickets",
+                    "kpi_id": "team_aged_tickets",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 140,
+                        "status": "optimal",
+                        "baseline": 137
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 117,
+                        "status": "optimal",
+                        "baseline": 122
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 123,
+                        "status": "optimal",
+                        "baseline": 127
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 119,
+                        "status": "optimal",
+                        "baseline": 111
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 94,
+                        "status": "optimal",
+                        "baseline": 117
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 163,
+                        "status": "optimal",
+                        "baseline": 198
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 142,
+                        "status": "optimal",
+                        "baseline": 157
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "%",
+                    "color": "green",
+                    "label": "First-Referral Closure Rate",
+                    "kpi_id": "team_first_referral_closure_rate",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "count": 824,
+                        "actual": "90.3%",
+                        "status": "optimal",
+                        "baseline": "93.1%",
+                        "sample_size": 913,
+                        "baseline_count": 872,
+                        "baseline_sample_size": 937
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "count": 889,
+                        "actual": "92.5%",
+                        "status": "optimal",
+                        "baseline": "92.5%",
+                        "sample_size": 961,
+                        "baseline_count": 822,
+                        "baseline_sample_size": 889
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "count": 789,
+                        "actual": "92.7%",
+                        "status": "optimal",
+                        "baseline": "92.8%",
+                        "sample_size": 851,
+                        "baseline_count": 790,
+                        "baseline_sample_size": 851
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "count": 730,
+                        "actual": "90.9%",
+                        "status": "optimal",
+                        "baseline": "93.1%",
+                        "sample_size": 803,
+                        "baseline_count": 791,
+                        "baseline_sample_size": 850
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "count": 758,
+                        "actual": "92.4%",
+                        "status": "optimal",
+                        "baseline": "93.1%",
+                        "sample_size": 820,
+                        "baseline_count": 771,
+                        "baseline_sample_size": 828
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "count": 589,
+                        "actual": "93.6%",
+                        "status": "optimal",
+                        "baseline": "93.5%",
+                        "sample_size": 629,
+                        "baseline_count": 585,
+                        "baseline_sample_size": 626
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "count": 748,
+                        "actual": "94.1%",
+                        "status": "optimal",
+                        "baseline": "93.5%",
+                        "sample_size": 795,
+                        "baseline_count": 774,
+                        "baseline_sample_size": 828
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "score",
+                    "color": "green",
+                    "label": "Performance Score",
+                    "kpi_id": "team_performance_score",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 97,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 95,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 99,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 99,
+                        "status": "optimal",
+                        "baseline": 90
+                      }
+                    ],
+                    "status": "optimal"
+                  }
+                ],
+                "team_id": "CSDD"
+              },
+              {
+                "color": "green",
+                "status": "optimal",
+                "metrics": [
+                  {
+                    "unit": "tickets",
+                    "color": "green",
+                    "label": "Closure",
+                    "kpi_id": "team_closure",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 337,
+                        "status": "optimal",
+                        "baseline": 350
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 342,
+                        "status": "optimal",
+                        "baseline": 330
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 352,
+                        "status": "optimal",
+                        "baseline": 352
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 337,
+                        "status": "optimal",
+                        "baseline": 329
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 329,
+                        "status": "optimal",
+                        "baseline": 329
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 263,
+                        "status": "optimal",
+                        "baseline": 246
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 281,
+                        "status": "optimal",
+                        "baseline": 303
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "tickets",
+                    "color": "green",
+                    "label": "Aged Tickets",
+                    "kpi_id": "team_aged_tickets",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 111,
+                        "status": "optimal",
+                        "baseline": 108
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 103,
+                        "status": "optimal",
+                        "baseline": 110
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 91,
+                        "status": "optimal",
+                        "baseline": 94
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "orange",
+                        "actual": 95,
+                        "status": "warning",
+                        "baseline": 82
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 74,
+                        "status": "optimal",
+                        "baseline": 87
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 86,
+                        "status": "optimal",
+                        "baseline": 115
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 86,
+                        "status": "optimal",
+                        "baseline": 106
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "%",
+                    "color": "green",
+                    "label": "First-Referral Closure Rate",
+                    "kpi_id": "team_first_referral_closure_rate",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "count": 303,
+                        "actual": "89.9%",
+                        "status": "optimal",
+                        "baseline": "92.6%",
+                        "sample_size": 337,
+                        "baseline_count": 324,
+                        "baseline_sample_size": 350
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "count": 307,
+                        "actual": "89.8%",
+                        "status": "optimal",
+                        "baseline": "91.5%",
+                        "sample_size": 342,
+                        "baseline_count": 302,
+                        "baseline_sample_size": 330
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "count": 312,
+                        "actual": "88.6%",
+                        "status": "optimal",
+                        "baseline": "91.2%",
+                        "sample_size": 352,
+                        "baseline_count": 321,
+                        "baseline_sample_size": 352
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "count": 301,
+                        "actual": "89.3%",
+                        "status": "optimal",
+                        "baseline": "90.6%",
+                        "sample_size": 337,
+                        "baseline_count": 298,
+                        "baseline_sample_size": 329
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "count": 299,
+                        "actual": "90.9%",
+                        "status": "optimal",
+                        "baseline": "91.2%",
+                        "sample_size": 329,
+                        "baseline_count": 300,
+                        "baseline_sample_size": 329
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "count": 237,
+                        "actual": "90.1%",
+                        "status": "optimal",
+                        "baseline": "91.9%",
+                        "sample_size": 263,
+                        "baseline_count": 226,
+                        "baseline_sample_size": 246
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "count": 255,
+                        "actual": "90.7%",
+                        "status": "optimal",
+                        "baseline": "90.4%",
+                        "sample_size": 281,
+                        "baseline_count": 274,
+                        "baseline_sample_size": 303
+                      }
+                    ],
+                    "status": "optimal"
+                  },
+                  {
+                    "unit": "score",
+                    "color": "green",
+                    "label": "Performance Score",
+                    "kpi_id": "team_performance_score",
+                    "points": [
+                      {
+                        "day": "Sun",
+                        "date": "2026-09-06",
+                        "color": "green",
+                        "actual": 97,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Mon",
+                        "date": "2026-09-07",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Tue",
+                        "date": "2026-09-08",
+                        "color": "green",
+                        "actual": 99,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Wed",
+                        "date": "2026-09-09",
+                        "color": "green",
+                        "actual": 94,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Thu",
+                        "date": "2026-09-10",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Fri",
+                        "date": "2026-09-11",
+                        "color": "green",
+                        "actual": 100,
+                        "status": "optimal",
+                        "baseline": 90
+                      },
+                      {
+                        "day": "Sat",
+                        "date": "2026-09-12",
+                        "color": "green",
+                        "actual": 97,
+                        "status": "optimal",
+                        "baseline": 90
+                      }
+                    ],
+                    "status": "optimal"
+                  }
+                ],
+                "team_id": "FOC"
+              }
+            ],
+            "status": "optimal",
+            "window_days": 7,
+            "rotation_hint_seconds": 30
+          },
+          "customer_journey_history": {
+            "metrics": [
+              {
+                "unit": "tickets",
+                "color": "green",
+                "label": "Created Tickets",
+                "kpi_id": "journey_created_tickets",
+                "points": [
+                  {
+                    "day": "Sun",
+                    "date": "2026-09-06",
+                    "color": "green",
+                    "actual": 1768,
+                    "status": "optimal",
+                    "baseline": 1837
+                  },
+                  {
+                    "day": "Mon",
+                    "date": "2026-09-07",
+                    "color": "green",
+                    "actual": 1654,
+                    "status": "optimal",
+                    "baseline": 1681
+                  },
+                  {
+                    "day": "Tue",
+                    "date": "2026-09-08",
+                    "color": "green",
+                    "actual": 1546,
+                    "status": "optimal",
+                    "baseline": 1609
+                  },
+                  {
+                    "day": "Wed",
+                    "date": "2026-09-09",
+                    "color": "green",
+                    "actual": 1484,
+                    "status": "optimal",
+                    "baseline": 1685
+                  },
+                  {
+                    "day": "Thu",
+                    "date": "2026-09-10",
+                    "color": "green",
+                    "actual": 1540,
+                    "status": "optimal",
+                    "baseline": 1678
+                  },
+                  {
+                    "day": "Fri",
+                    "date": "2026-09-11",
+                    "color": "green",
+                    "actual": 1242,
+                    "status": "optimal",
+                    "baseline": 1307
+                  },
+                  {
+                    "day": "Sat",
+                    "date": "2026-09-12",
+                    "color": "green",
+                    "actual": 1889,
+                    "status": "optimal",
+                    "baseline": 1710
+                  }
+                ],
+                "status": "optimal"
+              },
+              {
+                "unit": "tickets",
+                "color": "green",
+                "label": "Total Open",
+                "kpi_id": "journey_total_open",
+                "points": [
+                  {
+                    "day": "Sun",
+                    "date": "2026-09-06",
+                    "color": "green",
+                    "actual": 1159,
+                    "status": "optimal",
+                    "baseline": 1143
+                  },
+                  {
+                    "day": "Mon",
+                    "date": "2026-09-07",
+                    "color": "green",
+                    "actual": 1005,
+                    "status": "optimal",
+                    "baseline": 1010
+                  },
+                  {
+                    "day": "Tue",
+                    "date": "2026-09-08",
+                    "color": "green",
+                    "actual": 956,
+                    "status": "optimal",
+                    "baseline": 974
+                  },
+                  {
+                    "day": "Wed",
+                    "date": "2026-09-09",
+                    "color": "green",
+                    "actual": 893,
+                    "status": "optimal",
+                    "baseline": 1010
+                  },
+                  {
+                    "day": "Thu",
+                    "date": "2026-09-10",
+                    "color": "green",
+                    "actual": 850,
+                    "status": "optimal",
+                    "baseline": 968
+                  },
+                  {
+                    "day": "Fri",
+                    "date": "2026-09-11",
+                    "color": "green",
+                    "actual": 875,
+                    "status": "optimal",
+                    "baseline": 1016
+                  },
+                  {
+                    "day": "Sat",
+                    "date": "2026-09-12",
+                    "color": "green",
+                    "actual": 1118,
+                    "status": "optimal",
+                    "baseline": 1108
+                  }
+                ],
+                "status": "optimal"
+              },
+              {
+                "unit": "tickets",
+                "color": "green",
+                "label": "Aged >24 Hours",
+                "kpi_id": "journey_aged_over_24h",
+                "points": [
+                  {
+                    "day": "Sun",
+                    "date": "2026-09-06",
+                    "color": "green",
+                    "actual": 267,
+                    "status": "optimal",
+                    "baseline": 273
+                  },
+                  {
+                    "day": "Mon",
+                    "date": "2026-09-07",
+                    "color": "green",
+                    "actual": 246,
+                    "status": "optimal",
+                    "baseline": 268
+                  },
+                  {
+                    "day": "Tue",
+                    "date": "2026-09-08",
+                    "color": "green",
+                    "actual": 237,
+                    "status": "optimal",
+                    "baseline": 251
+                  },
+                  {
+                    "day": "Wed",
+                    "date": "2026-09-09",
+                    "color": "green",
+                    "actual": 237,
+                    "status": "optimal",
+                    "baseline": 220
+                  },
+                  {
+                    "day": "Thu",
+                    "date": "2026-09-10",
+                    "color": "green",
+                    "actual": 193,
+                    "status": "optimal",
+                    "baseline": 244
+                  },
+                  {
+                    "day": "Fri",
+                    "date": "2026-09-11",
+                    "color": "green",
+                    "actual": 268,
+                    "status": "optimal",
+                    "baseline": 341
+                  },
+                  {
+                    "day": "Sat",
+                    "date": "2026-09-12",
+                    "color": "green",
+                    "actual": 251,
+                    "status": "optimal",
+                    "baseline": 303
+                  }
+                ],
+                "status": "optimal"
+              },
+              {
+                "unit": "tickets",
+                "color": "green",
+                "label": "Total Closure",
+                "kpi_id": "journey_total_closure",
+                "points": [
+                  {
+                    "day": "Sun",
+                    "date": "2026-09-06",
+                    "color": "green",
+                    "actual": 1729,
+                    "status": "optimal",
+                    "baseline": 1813
+                  },
+                  {
+                    "day": "Mon",
+                    "date": "2026-09-07",
+                    "color": "green",
+                    "actual": 1808,
+                    "status": "optimal",
+                    "baseline": 1802
+                  },
+                  {
+                    "day": "Tue",
+                    "date": "2026-09-08",
+                    "color": "green",
+                    "actual": 1595,
+                    "status": "optimal",
+                    "baseline": 1662
+                  },
+                  {
+                    "day": "Wed",
+                    "date": "2026-09-09",
+                    "color": "green",
+                    "actual": 1547,
+                    "status": "optimal",
+                    "baseline": 1652
+                  },
+                  {
+                    "day": "Thu",
+                    "date": "2026-09-10",
+                    "color": "green",
+                    "actual": 1583,
+                    "status": "optimal",
+                    "baseline": 1722
+                  },
+                  {
+                    "day": "Fri",
+                    "date": "2026-09-11",
+                    "color": "green",
+                    "actual": 1217,
+                    "status": "optimal",
+                    "baseline": 1266
+                  },
+                  {
+                    "day": "Sat",
+                    "date": "2026-09-12",
+                    "color": "green",
+                    "actual": 1646,
+                    "status": "optimal",
+                    "baseline": 1592
+                  }
+                ],
+                "status": "optimal"
+              },
+              {
+                "unit": "tickets",
+                "color": "green",
+                "label": "Single Referral Closure",
+                "kpi_id": "journey_single_referral_closure",
+                "points": [
+                  {
+                    "day": "Sun",
+                    "date": "2026-09-06",
+                    "color": "green",
+                    "actual": 1511,
+                    "status": "optimal",
+                    "baseline": 1587.0,
+                    "sample_size": 1636,
+                    "baseline_sample_size": 1679.15
+                  },
+                  {
+                    "day": "Mon",
+                    "date": "2026-09-07",
+                    "color": "green",
+                    "actual": 1577,
+                    "status": "optimal",
+                    "baseline": 1514.33,
+                    "sample_size": 1684,
+                    "baseline_sample_size": 1609.15
+                  },
+                  {
+                    "day": "Tue",
+                    "date": "2026-09-08",
+                    "color": "green",
+                    "actual": 1460,
+                    "status": "optimal",
+                    "baseline": 1474.5,
+                    "sample_size": 1562,
+                    "baseline_sample_size": 1566.52
+                  },
+                  {
+                    "day": "Wed",
+                    "date": "2026-09-09",
+                    "color": "green",
+                    "actual": 1392,
+                    "status": "optimal",
+                    "baseline": 1482.02,
+                    "sample_size": 1501,
+                    "baseline_sample_size": 1571.66
+                  },
+                  {
+                    "day": "Thu",
+                    "date": "2026-09-10",
+                    "color": "green",
+                    "actual": 1430,
+                    "status": "optimal",
+                    "baseline": 1452.16,
+                    "sample_size": 1522,
+                    "baseline_sample_size": 1539.34
+                  },
+                  {
+                    "day": "Fri",
+                    "date": "2026-09-11",
+                    "color": "green",
+                    "actual": 1106,
+                    "status": "optimal",
+                    "baseline": 1124.66,
+                    "sample_size": 1173,
+                    "baseline_sample_size": 1185.99
+                  },
+                  {
+                    "day": "Sat",
+                    "date": "2026-09-12",
+                    "color": "green",
+                    "actual": 1431,
+                    "status": "optimal",
+                    "baseline": 1407.35,
+                    "sample_size": 1505,
+                    "baseline_sample_size": 1491.19
+                  }
+                ],
+                "status": "optimal"
+              }
+            ],
+            "window_days": 7
+          }
+        },
+        {
+          "kpis": [
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Pending Tickets",
+              "value": 0,
+              "kpi_id": "nonop_team_pending_tickets",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": null,
+                "end_rule": "current_snapshot"
+              },
+              "team_id": "SOC-FTR",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 0,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 0,
+                "direction": "lower_is_better",
+                "percentage": null
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Closures",
+              "value": 228,
+              "kpi_id": "nonop_team_closure",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "IVR",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 217,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 11,
+                "direction": "higher_is_better",
+                "percentage": 5
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "count": 228,
+              "label": "Closure Rate",
+              "value": 228,
+              "kpi_id": "nonop_team_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "IVR",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 217,
+                "value": 217,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": 7.7,
+                "direction": "higher_is_better",
+                "percentage": null
+              },
+              "total_at_stage": 429
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "label": "Closures",
+              "value": 119,
+              "kpi_id": "nonop_team_closure",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "SOC-Quality",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "value": 132,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -13,
+                "direction": "higher_is_better",
+                "percentage": -10
+              }
+            },
+            {
+              "unit": "tickets",
+              "color": "green",
+              "count": 119,
+              "label": "Closure Rate",
+              "value": 119,
+              "kpi_id": "nonop_team_closure_rate",
+              "status": "optimal",
+              "window": {
+                "end": "2026-09-13T17:00:00+03:00",
+                "start": "2026-09-13T00:00:00+03:00",
+                "end_rule": "current_completed_hour"
+              },
+              "team_id": "SOC-Quality",
+              "baseline": {
+                "mode": "moving_same_weekday",
+                "count": 132,
+                "value": 132,
+                "period_count": 6
+              },
+              "comparison": {
+                "absolute": -3.7,
+                "direction": "higher_is_better",
+                "percentage": null
+              },
+              "total_at_stage": 238
+            }
+          ],
+          "color": "green",
+          "order": 8,
+          "state": "ok",
+          "title": "Non-Operational Teams",
+          "status": "optimal",
+          "command_id": "complaint_intelligence",
+          "section_id": "non_operational_teams",
+          "zone_title": "Customer Complaints & CEX Watch",
+          "zone_number": "01",
+          "command_order": 2
+        }
+      ]
+    }
+  },
+  "DataCount": 0
+}
