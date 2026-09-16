@@ -1,7 +1,7 @@
 services:
   b2s-mock-api:
     # Replace OWNER/REPO with the lowercase GitHub org/user and repo name (ghcr.io requires lowercase).
-    image: ghcr.io/OWNER/REPO:latest
+    image: ghcr.io/hazzemh/back-to-school-mock-api:latest
     container_name: b2s-mock-api
     env_file:
       - .env
