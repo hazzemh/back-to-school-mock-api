@@ -17,6 +17,7 @@ class Settings:
     app_host: str = os.getenv("APP_HOST", "0.0.0.0")
     app_port: int = int(os.getenv("APP_PORT", "8000"))
     log_level: str = os.getenv("LOG_LEVEL", "INFO")
+    root_path: str = os.getenv("ROOT_PATH", "/b2s-mock-api")
 
     mock_data_refresh_seconds: int = max(1, int(os.getenv("MOCK_DATA_REFRESH_SECONDS", "60")))
     mock_scenario: str = os.getenv("MOCK_SCENARIO", "source").strip().lower()
