@@ -23,6 +23,7 @@ app = FastAPI(
         "Mock integration service for the Back to School dashboards, current-user context, "
         "and the AI chat integration boundary. The three legacy dashboard routes preserve the supplied response envelope."
     ),
+    root_path="/b2s-mock-api",
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
