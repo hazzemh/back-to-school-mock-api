@@ -10,3 +10,8 @@ class CurrentUser(BaseModel):
     email: EmailStr
     role: str
     preferred_language: str = "en"
+
+
+class UserInDB(CurrentUser):
+    password_hash: str
+

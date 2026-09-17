@@ -53,16 +53,29 @@ GET /api/ExternalService/get_back_to_school_complaint_intelligence_dashboard_pay
 GET /api/ExternalService/get_back_to_school_service_operations_dashboard_payload
 ```
 
-## User endpoint
+## User & Auth endpoints
+
+```text
+POST /api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username_or_email": "hazem.hossam",
+  "password": "password123"
+}
+```
 
 ```text
 GET /api/v1/users/me
+Authorization: Bearer <token>
 ```
+
 
 ## Chat endpoint
 
 ```text
 POST /api/v1/chat
+Authorization: Bearer <token>
 Content-Type: application/json
 
 {
@@ -70,6 +83,7 @@ Content-Type: application/json
   "conversation_id": "conv-001"
 }
 ```
+
 
 The project runs with `MOCK_AI_ENABLED=true` by default. When the AI team's service is ready:
 
