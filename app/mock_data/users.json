@@ -7,6 +7,40 @@
     "display_name": "Hazem Hossam",
     "email": "hazem.hossam@example.com",
     "role": "Network Operations",
-    "preferred_language": "en"
+    "preferred_language": "en",
+    "password_hash": "$2b$10$CLphRoEDIE7wbOBvn2mhpOdMABgmgm3qiEJEg11g8z3XegEzAEFNC"
+  },
+  {
+    "id": "USR-002",
+    "username": "mohamed.abdelmonem",
+    "first_name": "Mohamed",
+    "last_name": "Abdelmonem",
+    "display_name": "Mohamed Abdelmonem",
+    "email": "mohamed.abdelmonem@example.com",
+    "role": "Service Operations",
+    "preferred_language": "en",
+    "password_hash": "$2b$10$CLphRoEDIE7wbOBvn2mhpOdMABgmgm3qiEJEg11g8z3XegEzAEFNC"
+  },
+  {
+    "id": "USR-003",
+    "username": "sarah.almansoor",
+    "first_name": "Sarah",
+    "last_name": "Al-Mansoor",
+    "display_name": "Sarah Al-Mansoor",
+    "email": "sarah.almansoor@example.com",
+    "role": "Customer Experience",
+    "preferred_language": "en",
+    "password_hash": "$2b$10$CLphRoEDIE7wbOBvn2mhpOdMABgmgm3qiEJEg11g8z3XegEzAEFNC"
+  },
+  {
+    "id": "USR-004",
+    "username": "khalid.otaibi",
+    "first_name": "Khalid",
+    "last_name": "Al-Otaibi",
+    "display_name": "Khalid Al-Otaibi",
+    "email": "khalid.otaibi@example.com",
+    "role": "Field Operations",
+    "preferred_language": "ar",
+    "password_hash": "$2b$10$CLphRoEDIE7wbOBvn2mhpOdMABgmgm3qiEJEg11g8z3XegEzAEFNC"
   }
 ]

@@ -1,8 +1,7 @@
 from fastapi import APIRouter, Depends
 
-from app.api.dependencies import get_user_service
+from app.api.dependencies import get_current_user
 from app.schemas.user import CurrentUser
-from app.services.user_service import UserService
 
 router = APIRouter(prefix="/api/v1/users", tags=["User"])
 
@@ -11,7 +10,8 @@ router = APIRouter(prefix="/api/v1/users", tags=["User"])
     "/me",
     response_model=CurrentUser,
     summary="Get current user",
-    description="Returns the current mock user for chatbot greeting/personalization. Replace with token-derived identity when authentication is introduced.",
+    description="Returns the authenticated user for chatbot greeting and personalization derived from the Bearer access token.",
 )
-def get_me(service: UserService = Depends(get_user_service)) -> CurrentUser:
-    return service.get_current_user()
+def get_me(current_user: CurrentUser = Depends(get_current_user)) -> CurrentUser:
+    return current_user
+

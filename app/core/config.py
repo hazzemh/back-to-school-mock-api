@@ -23,6 +23,10 @@ class Settings:
 
     mock_user_id: str = os.getenv("MOCK_USER_ID", "USR-001")
 
+    jwt_secret_key: str = os.getenv("JWT_SECRET_KEY", "b2s_mock_secret_key_change_in_production_12345")
+    jwt_algorithm: str = os.getenv("JWT_ALGORITHM", "HS256")
+    jwt_access_token_expire_minutes: int = int(os.getenv("JWT_ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
+
     mock_ai_enabled: bool = _as_bool(os.getenv("MOCK_AI_ENABLED"), True)
     ai_service_url: str | None = os.getenv("AI_SERVICE_URL") or None
     ai_chat_path: str = os.getenv("AI_CHAT_PATH", "/chat")

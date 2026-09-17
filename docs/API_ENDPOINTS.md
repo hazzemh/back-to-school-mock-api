@@ -6,7 +6,7 @@
 - **OpenAPI:** `GET /openapi.json`
 - **Swagger UI:** `GET /docs`
 - **ReDoc:** `GET /redoc`
-- **Authentication:** None in the mock implementation.
+- **Authentication:** Bearer JWT authentication for protected endpoints (`/api/v1/users/me`, `/api/v1/chat`, `/api/v1/chat/history/{conversation_id}`).
 - **Content type:** JSON responses use `Content-Type: application/json`.
 - **Correlation:** Every request may include `X-Request-ID`. The API echoes the supplied value or generates a UUID and returns it in the response header.
 
@@ -20,6 +20,7 @@ All endpoints have no path parameters or query parameters unless stated otherwis
 |---|---:|---|
 | `X-Request-ID` | No | Caller-supplied correlation ID. A UUID is generated when omitted. |
 | `Content-Type` | POST only | Must be `application/json` for requests with a JSON body. |
+| `Authorization` | Protected routes | `Bearer <access_token>` retrieved from `/api/v1/auth/login`. |
 
 ### Response headers
 
@@ -34,12 +35,15 @@ All endpoints have no path parameters or query parameters unless stated otherwis
 |---|---|---|
 | `GET` | `/health` | Liveness probe. |
 | `GET` | `/ready` | Readiness probe. |
-| `GET` | `/api/v1/users/me` | Return the current mock user. |
+| `POST` | `/api/v1/auth/login` | Authenticate user credentials and issue JWT token. |
+| `GET` | `/api/v1/users/me` | Return the current authenticated user profile. |
 | `GET` | `/api/ExternalService/get_back_to_school_service_assurance_dashboard_payload` | B2S1 service assurance dashboard. |
 | `GET` | `/api/ExternalService/get_back_to_school_complaint_intelligence_dashboard_payload` | B2S2 complaint intelligence dashboard. |
 | `GET` | `/api/ExternalService/get_back_to_school_service_operations_dashboard_payload` | B2S3 service operations dashboard. |
 | `GET` | `/api/ExternalService/get_back_to_school_ftth_maturity_index_dashboard_payload` | B2S4 FTTH maturity index dashboard. |
 | `POST` | `/api/v1/chat` | Send a message through the AI integration boundary. |
+| `GET` | `/api/v1/chat/history/{conversation_id}` | Retrieve history of conversation with the AI chatbot. |
+| `POST` | `/api/v1/chat/welcome` | Retrieve initial welcome greeting and starter prompts. |
 
 ---
 
@@ -95,11 +99,62 @@ curl -i \
 
 ---
 
-## 3. Current User
+## 3. User Authentication
+
+### `POST /api/v1/auth/login`
+
+Authenticates user credentials and returns a JWT Bearer access token.
+
+**Request headers:**
+
+| Header | Required | Value |
+|---|---:|---|
+| `Content-Type` | Yes | `application/json` |
+| `X-Request-ID` | No | Caller-supplied correlation ID. |
+
+**Request body:**
+
+| Field | Type | Required | Description |
+|---|---|---:|---|
+| `username_or_email` | string | Yes | Username or email address of the user. |
+| `password` | string | Yes | User password. |
+
+**Example request:**
+
+```bash
+curl -i -X POST \
+  http://localhost:8000/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -H "X-Request-ID: auth-login-001" \
+  -d '{
+    "username_or_email": "hazem.hossam",
+    "password": "password123"
+  }'
+```
+
+**Success response: `200 OK`**
+
+| Field | Type | Description |
+|---|---|---|
+| `access_token` | string | JWT Bearer access token. |
+| `token_type` | string | Token type (always `bearer`). |
+| `expires_in` | integer | Access token expiration in seconds. |
+
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "bearer",
+  "expires_in": 1800
+}
+```
+
+---
+
+## 4. Current User
 
 ### `GET /api/v1/users/me`
 
-Returns the current mock user for chatbot greeting and personalization. Authentication is not implemented; the response is currently sourced from mock data.
+Returns the authenticated user details for chatbot greeting and personalization. Requires Bearer token authentication.
 
 **Parameters:** None
 
@@ -286,20 +341,23 @@ Unlike the other three dashboards, this endpoint does **not** use the common `St
 
 ---
 
-## 5. Chat
+## 6. Chat & AI Integration
 
-### `POST /api/v1/chat`
+### 6.1 Send Chat Message
 
-Application-side adapter for the AI team's chatbot service. Mock mode is enabled by default. When external forwarding is enabled, the API forwards the request to the configured AI service and passes through the same `X-Request-ID`.
+#### `POST /api/v1/chat`
 
-### Request headers
+Application-side adapter for the AI team's chatbot service. Mock mode is enabled by default. Requires Bearer token authentication.
+
+**Request headers:**
 
 | Header | Required | Value |
 |---|---:|---|
+| `Authorization` | Yes | `Bearer <access_token>` |
 | `Content-Type` | Yes | `application/json` |
 | `X-Request-ID` | No | Caller-supplied correlation ID. |
 
-### Request body
+**Request body:**
 
 | Field | Type | Required | Constraints | Description |
 |---|---|---:|---|---|
@@ -311,6 +369,7 @@ Application-side adapter for the AI team's chatbot service. Mock mode is enabled
 ```bash
 curl -i -X POST \
   http://localhost:8000/api/v1/chat \
+  -H "Authorization: Bearer <access_token>" \
   -H "Content-Type: application/json" \
   -H "X-Request-ID: chat-request-001" \
   -d '{
@@ -319,7 +378,7 @@ curl -i -X POST \
   }'
 ```
 
-### Success response: `200 OK`
+**Success response: `200 OK`**
 
 | Field | Type | Description |
 |---|---|---|
@@ -339,12 +398,131 @@ curl -i -X POST \
 }
 ```
 
+### 6.2 Get Conversation History
+
+#### `GET /api/v1/chat/history/{conversation_id}`
+
+Retrieves the message history for a given conversation ID with the AI chatbot. Requires Bearer token authentication.
+
+**Path parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---:|---|
+| `conversation_id` | string | Yes | Conversation identifier. |
+
+**Request headers:**
+
+| Header | Required | Value |
+|---|---:|---|
+| `Authorization` | Yes | `Bearer <access_token>` |
+| `X-Request-ID` | No | Caller-supplied correlation ID. |
+
+**Example request:**
+
+```bash
+curl -i \
+  http://localhost:8000/api/v1/chat/history/conv-001 \
+  -H "Authorization: Bearer <access_token>" \
+  -H "X-Request-ID: chat-history-001"
+```
+
+**Success response: `200 OK`**
+
+| Field | Type | Description |
+|---|---|---|
+| `conversation_id` | string | Conversation identifier. |
+| `messages` | array | List of chat messages in chronological order. |
+| `messages[].message_id` | string | Message identifier. |
+| `messages[].role` | string | Role of the sender (`user` or `assistant`). |
+| `messages[].content` | string | Message text content. |
+| `messages[].timestamp` | string | ISO 8601 timestamp. |
+
+```json
+{
+  "conversation_id": "conv-001",
+  "messages": [
+    {
+      "message_id": "msg-001",
+      "role": "user",
+      "content": "Hello, I need assistance with network status.",
+      "timestamp": "2026-09-17T12:00:00+03:00"
+    },
+    {
+      "message_id": "msg-002",
+      "role": "assistant",
+      "content": "Hello Hazem! Mock AI response history for conversation 'conv-001'. All systems in Network Operations and Service Operations are running normally.",
+      "timestamp": "2026-09-17T12:00:05+03:00"
+    }
+  ]
+}
+```
+
+### 6.3 Welcome Message
+
+#### `POST /api/v1/chat/welcome`
+
+Fetches an initial personalized welcome greeting and starter prompts for a new or existing chatbot session. Requires Bearer token authentication.
+
+**Request headers:**
+
+| Header | Required | Value |
+|---|---:|---|
+| `Authorization` | Yes | `Bearer <access_token>` |
+| `Content-Type` | Yes | `application/json` |
+| `X-Request-ID` | No | Caller-supplied correlation ID. |
+
+**Request body:**
+
+| Field | Type | Required | Description |
+|---|---|---:|---|
+| `conversation_id` | string or null | No | Optional existing conversation identifier. If omitted, one is generated. |
+
+**Example request:**
+
+```bash
+curl -i -X POST \
+  http://localhost:8000/api/v1/chat/welcome \
+  -H "Authorization: Bearer <access_token>" \
+  -H "Content-Type: application/json" \
+  -H "X-Request-ID: chat-welcome-001" \
+  -d '{
+    "conversation_id": "conv-001"
+  }'
+```
+
+**Success response: `200 OK`**
+
+| Field | Type | Description |
+|---|---|---|
+| `conversation_id` | string | Conversation identifier. |
+| `message_id` | string | Message identifier for the welcome message. |
+| `welcome_message` | string | Personalized greeting message. |
+| `suggested_prompts` | array | List of starter/recommended prompt strings. |
+| `generated_at` | string | ISO 8601 timestamp with timezone. |
+| `provider` | string | `mock` in mock mode or `external` when forwarded. |
+
+```json
+{
+  "conversation_id": "conv-001",
+  "message_id": "msg-welcome-001",
+  "welcome_message": "Hello Hazem! Welcome to the B2S Operations Assistant. How can I assist you with network assurance, complaints, or service operations today?",
+  "suggested_prompts": [
+    "What is the current network status?",
+    "Show complaint intelligence overview",
+    "View FTTH maturity index dashboard"
+  ],
+  "generated_at": "2026-09-17T13:35:00+03:00",
+  "provider": "mock"
+}
+```
+
 ### Configuration behavior
 
 - Mock mode is enabled by default with `MOCK_AI_ENABLED=true`.
 - To forward requests, set `MOCK_AI_ENABLED=false` and configure `AI_SERVICE_URL`.
 - The upstream path is configured with `AI_CHAT_PATH`.
-- The adapter sends the JSON request body and `X-Request-ID` to the upstream service.
+- The adapter sends request headers and `X-Request-ID` to the upstream service.
+
 
 ---
 

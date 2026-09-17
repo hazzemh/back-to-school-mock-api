@@ -21,3 +21,14 @@ class UserNotFoundError(AppError):
 class AIServiceError(AppError):
     def __init__(self, message: str = "The AI service is temporarily unavailable.", status_code: int = 502):
         super().__init__("AI_SERVICE_UNAVAILABLE", message, status_code)
+
+
+class InvalidCredentialsError(AppError):
+    def __init__(self, message: str = "Invalid username/email or password"):
+        super().__init__("INVALID_CREDENTIALS", message, 401)
+
+
+class UnauthorizedError(AppError):
+    def __init__(self, message: str = "Could not validate credentials"):
+        super().__init__("UNAUTHORIZED", message, 401)
+
